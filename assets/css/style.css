@@ -1,81 +1,97 @@
 body {
-    background-color: black;
-    color: white;
-    font-family: Titillium Web;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  /*---header---*/
-  #logo {
-     float: left;
-    color: white;
-     font-size: 280%;
-     margin-left: 1.875rem;
-  }
-  
-  #menu {
-     font-size: 100%;
-     font-weight: 600;
-     letter-spacing: 0.125rem;
-     float: right;
-  }
-  
-  #menu,
-  #logo {
-     line-height: 4.6875rem;
-  }
-  
-  #menu li {
-     float: left;
-     list-style-type: none;
-     margin-right: 1.875rem;
-  }
-  
-  #menu a {
-     text-decoration: none;
-     color: inherit;
-  }
-  
-  #menu a:hover {
-     border-bottom: 0.0625rem solid white;
-  }
-  
-  header {
-    background-color: red;
-    color: white;
-  }
-  
-  /*--quiz-box---*/
-  
-  #quiz-box {
-    text-align: center;
-    padding: 20px;
-    background-color: gray;
-    border-radius: 15px;
-    margin: auto;
-  }
-  
-  #quiz-box h1 {
-    color: white;
-    margin-bottom: 20px;
-  }
-  
-  /*---button---*/
-  
-  button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    font-family: Titillium Web;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  button:hover {
-    opacity: 0.7;
-    background-color: red;
-  }
+   background-color: black;
+   color: white;
+   font-family: Titillium Web;
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+ }
+ 
+ /*---header---*/
+ #logo {
+    float: left;
+   color: white;
+    font-size: 280%;
+    margin-left: 1.875rem;
+ }
+ 
+ #menu {
+    font-size: 100%;
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+    float: right;
+ }
+ 
+ #menu,
+ #logo {
+    line-height: 4.6875rem;
+ }
+ 
+ #menu li {
+    float: left;
+    list-style-type: none;
+    margin-right: 1.875rem;
+ }
+ 
+ #menu a {
+    text-decoration: none;
+    color: inherit;
+ }
+ 
+ #menu a:hover {
+    border-bottom: 0.0625rem solid var(--darkgrey);
+ }
+ 
+ header {
+   background-color: red;
+   color: white;
+ }
+ 
+ /*--intro-box---*/
+ 
+ .intro-box {
+   text-align: center;
+   padding: 20px;
+   background-color: gray;
+   border-radius: 15px;
+   margin: auto;
+ }
+ 
+ .intro-box h1 {
+   color: white;
+   margin-bottom: 20px;
+ }
+ 
+ /*---button---*/
+ 
+ button {
+   display: block;
+   margin: 10px auto;
+   padding: 10px 20px;
+   font-family: Titillium Web;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+ 
+ button:hover {
+   opacity: 0.7;
+   background-color: red;
+ }
+ 
+ /*---difficulty---*/
+ .hidden {
+   display: none; 
+ }
+ 
+ .quiz-box {
+   text-align: center;
+   padding: 20px;
+   background-color: gray;
+   border-radius: 15px;
+   margin: auto;
+ }
+ 
+ 
+ 

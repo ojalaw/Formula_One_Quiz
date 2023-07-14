@@ -103,6 +103,13 @@ let questions = {
 const playButton = document.querySelector("#play-button");
 const introBox = document.querySelector("#intro-box");
 const difficultyBox = document.querySelector("#difficulty");
+const easyButton = document.querySelector("#easy");
+const mediumButton = document.querySelector("#medium");
+const hardButton = document.querySelector("#hard");
+const quizBox = document.querySelector("#quiz");
+const questionText = document.querySelector("#question-text");
+const answersContainer = document.querySelector("#answers-container");
+const nextButton = document.querySelector("#next-question");
 
 // Play button click handler
 playButton.addEventListener("click", () => {

@@ -185,17 +185,25 @@ function handleAnswer(isCorrect, target) {
   nextButton.classList.remove("hidden");
 }
 
-
-
-
-
-
-
-
-
-
 // nextButton event listener
-
+nextButton.addEventListener("click", () => {
+    // Move to the next question
+    currentQuestionIndex++;
+    
+    // Check if there are more questions
+    if(currentQuestionIndex < questions[difficulty].length) {
+      // Load the next question
+      loadQuestion(questions[difficulty][currentQuestionIndex]);
+      // Hide the next button again
+      nextButton.classList.add("hidden");
+      answerMessage.classList.add("hidden")
+    } else {
+      // End of the quiz! Hide the quiz box and show a message or score
+      quizBox.classList.add("hidden");
+      console.log("Quiz complete!");
+    }
+  });
+  
 
 
 

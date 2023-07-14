@@ -99,6 +99,10 @@ let questions = {
     ],
   };
 
+  // variables for keeping track of the index of the question and quiz difficulty
+let currentQuestionIndex;
+let difficulty;
+
     // Get elements
 const playButton = document.querySelector("#play-button");
 const introBox = document.querySelector("#intro-box");
@@ -121,30 +125,65 @@ playButton.addEventListener("click", () => {
     difficultyBox.classList.remove("hidden");
 });
 
-// Difficulty level event listeners
-
-
-
-
-
-
+// Difficulty buttons event listener
+easyButton.addEventListener("click", () => startQuiz('easy'));
+mediumButton.addEventListener("click", () => startQuiz('medium'));
+hardButton.addEventListener("click", () => startQuiz('hard'));
 
 // startQuiz() function
 
-
-
-
-
-
-
-
-
+function startQuiz(selectedDifficulty) {
+    // Hide difficulty box
+    difficultyBox.classList.add("hidden");
+    // Show the quiz
+    quizBox.classList.remove("hidden");
+    // Get difficulty level from the button that was clicked
+    difficulty = selectedDifficulty;
+    console.log(questions[difficulty].length);
+    currentQuestionIndex = 0;
+    loadQuestion(questions[difficulty][currentQuestionIndex]);
+  }
 
 // loadQuiz() function
 
+function loadQuestion(question) {
+    // Update the question text
+    questionText.textContent = question.text;
+  
+    // Clear any old answers
+    answersContainer.innerHTML = '';
+  
+    // Create a new button for each answer
+    for (let i = 0; i < question.answers.length; i++) {
+      let answer = question.answers[i];
+      let answerButton = document.createElement("button");
+      answerButton.textContent = answer.text;
+      answerButton.addEventListener("click", (event) => {
+        handleAnswer(answer.isCorrect, event.target);
+      });
+      answersContainer.appendChild(answerButton);
+    }
+  }
+
+// Get the message element
+const answerMessage = document.querySelector("#answer-message");
 
 
+// handleAnswer() function
+function handleAnswer(isCorrect, target) {
+  // log whether the answer was correct to test function
+  console.log(isCorrect ? "Correct!" : "Incorrect!");
 
+  // Mark the answer as correct or incorrect
+  target.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+  // Update the answer message and make it visible
+  answerMessage.textContent = isCorrect ? "Correct answer!" : "Incorrect answer!";
+  answerMessage.classList.remove('hidden');
+
+  // Show the next button
+  nextButton.classList.remove("hidden");
+}
 
 
 
@@ -167,4 +206,3 @@ playButton.addEventListener("click", () => {
 
 
 
-// handleAnswer() function

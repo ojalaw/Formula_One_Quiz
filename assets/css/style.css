@@ -49,7 +49,7 @@ body {
  
  /*--intro-box---*/
  
- .intro-box {
+ #intro-box {
    text-align: center;
    padding: 20px;
    background-color: gray;
@@ -57,7 +57,7 @@ body {
    margin: auto;
  }
  
- .intro-box h1 {
+ #intro-box h1 {
    color: white;
    margin-bottom: 20px;
  }

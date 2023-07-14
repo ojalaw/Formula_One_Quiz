@@ -100,8 +100,8 @@ let questions = {
   };
 
     // Get elements
-const playButton = document.getElementById("play-button");
-const introBox = document.querySelector(".intro-box");
+const playButton = document.querySelector("#play-button");
+const introBox = document.querySelector("#intro-box");
 const difficultyBox = document.querySelector("#difficulty");
 
 // Play button click handler

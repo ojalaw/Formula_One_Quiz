@@ -297,6 +297,8 @@ const quizBox = document.querySelector("#quiz");
 const questionText = document.querySelector("#question-text");
 const answersContainer = document.querySelector("#answers-container");
 const nextButton = document.querySelector("#next-question");
+const completionBox = document.querySelector("#completion-box");
+const backButton = document.querySelector("#back-to-menu");
 
 // Play button click handler
 playButton.addEventListener("click", () => {
@@ -351,19 +353,20 @@ function loadQuestion(question) {
 // Get the message element
 const answerMessage = document.querySelector("#answer-message");
 
-
 // handleAnswer() function
 function handleAnswer(isCorrect, target) {
-  // log whether the answer was correct to test function
-  console.log(isCorrect ? "Correct!" : "Incorrect!");
-
-  // Mark the answer as correct or incorrect
-  target.classList.add(isCorrect ? 'correct' : 'incorrect');
-
+  // Disable all buttons inside the answersContainer
+  const buttons = answersContainer.getElementsByTagName('button');
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+    // Add 'correct' or 'incorrect' class to the selected button
+    if (buttons[i] === target) {
+      buttons[i].classList.add(isCorrect ? 'correct' : 'incorrect');
+    }
+  }
   // Update the answer message and make it visible
   answerMessage.textContent = isCorrect ? "Correct answer!" : "Incorrect answer!";
   answerMessage.classList.remove('hidden');
-
   // Show the next button
   nextButton.classList.remove("hidden");
 }
@@ -381,13 +384,18 @@ nextButton.addEventListener("click", () => {
       nextButton.classList.add("hidden");
       answerMessage.classList.add("hidden")
     } else {
-      // End of the quiz! Hide the quiz box and show a message or score
+      // End of the quiz! Hide the quiz box and show a message (score to be added)
       quizBox.classList.add("hidden");
       console.log("Quiz complete!");
+      completionBox.classList.remove("hidden");
     }
   });
-  
 
+backButton.addEventListener("click", () => {
+  // Reset the quiz and go back to the main menu
+  introBox.classList.remove("hidden");
+  completionBox.classList.add("hidden");
+});
 
 
 

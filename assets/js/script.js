@@ -92,10 +92,193 @@ let questions = {
       }
     ],
     medium: [
-      // medium level questions and answers go here...
+      {
+        text: "What does it mean when a driver is on pole?",
+        answers: [
+          { text: "They climbed a pole before the race", isCorrect: false },
+          { text: "They have qualified for the race fastest", isCorrect: true },
+          { text: "They have qualified for the race slowest", isCorrect: false },
+          { text: "They have qualified in third place", isCorrect: false },
+        ],
+      },
+      {
+        text:
+          "What colour flag is waved to a driver to indicate that there is a fast car approaching and they should move off of the racing line?",
+        answers: [
+          { text: "Blue", isCorrect: true },
+          { text: "Red", isCorrect: false },
+          { text: "Yellow", isCorrect: false },
+          { text: "Orange", isCorrect: false },
+        ],
+      },
+      {
+        text: "What colour is the sidewall of a hard compound tyre?",
+        answers: [
+          { text: "Red", isCorrect: false },
+          { text: "White", isCorrect: true },
+          { text: "Yellow", isCorrect: false },
+          { text: "Green", isCorrect: false },
+        ],
+      },
+      {
+        text:
+          "In the 2023 F1 season, Daniel Ricciardo is the reserve driver for which team?",
+        answers: [
+          { text: "Red Bull Racing", isCorrect: true },
+          { text: "Mercedes", isCorrect: false },
+          { text: "Ferrari", isCorrect: false },
+          { text: "Alpine Racing", isCorrect: false },
+        ],
+      },
+      {
+        text:
+          "Which current British driver has won 7 World Championships?",
+        answers: [
+          { text: "Lewis Hamilton", isCorrect: true },
+          { text: "Lando Norris", isCorrect: false },
+          { text: "George Russell", isCorrect: false },
+          { text: "Nigel Mansell", isCorrect: false },
+        ],
+      },
+      {
+        text: "What does it mean when race engineers tell drivers to 'box box'?",
+        answers: [
+          { text: "The driver should slow down", isCorrect: false },
+          { text: "The driver should speed up", isCorrect: false },
+          { text: "The driver should come into the pits", isCorrect: true },
+        ],
+      },
+      {
+        text:
+          "How many races will be hosted in the USA in the 2023 F1 season?",
+        answers: [
+          { text: "None", isCorrect: false },
+          { text: "1", isCorrect: false },
+          { text: "2", isCorrect: false },
+          { text: "3", isCorrect: true },
+        ],
+      },
+      {
+        text: "Who was the F1 world champion in the F1 2022 season?",
+        answers: [
+          { text: "Michael Schumacher", isCorrect: false },
+          { text: "Valteri Bottas", isCorrect: false },
+          { text: "Lewis Hamilton", isCorrect: false },
+          { text: "Max Verstappen", isCorrect: true },
+        ],
+      },
+      {
+        text:
+          "Who are the 2 McLaren drivers for the F1 2023 season?",
+        answers: [
+          { text: "Lando Norris and Oscar Piastri", isCorrect: true },
+          { text: "Lewis Hamilton and George Russell", isCorrect: false },
+          { text: "Lando Norris and Max Verstappen", isCorrect: false },
+          { text: "Oscar Piastri and Lance Stroll", isCorrect: false },
+        ],
+      },
+      {
+        text:
+          "Which one of these drivers secured a seat in an F1 team for the first time in 2023?",
+        answers: [
+          { text: "Lance Stroll", isCorrect: false },
+          { text: "Lando Norris", isCorrect: false },
+          { text: "Nyck De Vries", isCorrect: true },
+          { text: "Sergio Perez", isCorrect: false },
+        ],
+      },
     ],
     hard: [
-      // hard level questions and answers go here...
+      {
+        text: "In which year did Lewis Hamilton win his first world title?",
+        answers: [
+          { text: "2008", isCorrect: true },
+          { text: "2010", isCorrect: false },
+          { text: "2005", isCorrect: false },
+          { text: "2006", isCorrect: false },
+        ],
+      },
+      {
+        text: "How many times did Juan Manuel Fangio win the world Championship?",
+        answers: [
+          { text: "3", isCorrect: false },
+          { text: "4", isCorrect: false },
+          { text: "8", isCorrect: false },
+          { text: "5", isCorrect: true },
+        ],
+      },
+      {
+        text: "What does DRS stand for?",
+        answers: [
+          { text: "Drag Reduction System", isCorrect: true },
+          { text: "Drivers Responsive System", isCorrect: false },
+          { text: "Drive Right Soon", isCorrect: false },
+          { text: "Don't Rev So much", isCorrect: false },
+        ],
+      },
+      {
+        text: "How many sectors are there in a race?",
+        answers: [
+          { text: "20", isCorrect: false },
+          { text: "10", isCorrect: false },
+          { text: "5", isCorrect: false },
+          { text: "3", isCorrect: true },
+        ],
+      },
+      {
+        text: "What time does a driver need to be within the driver in front to use DRS?",
+        answers: [
+          { text: "2 sec", isCorrect: false },
+          { text: "1 sec", isCorrect: true },
+          { text: "0.5 sec", isCorrect: false },
+          { text: "5 sec", isCorrect: false },
+        ],
+      },
+      {
+        text: "Which of the following tracks are street circuits?",
+        answers: [
+          { text: "Monaco", isCorrect: true },
+          { text: "Silverstone", isCorrect: false },
+          { text: "Monza", isCorrect: false },
+          { text: "Melbourne", isCorrect: false },
+        ],
+      },
+      {
+        text: "The 'Wall of Champions' is a famous corner on a track in which country?",
+        answers: [
+          { text: "Spain", isCorrect: false },
+          { text: "Italy", isCorrect: false },
+          { text: "USA", isCorrect: false },
+          { text: "Canada", isCorrect: true },
+        ],
+      },
+      {
+        text: "The 'Eau Rouge' part of the track is present at what circuit?",
+        answers: [
+          { text: "Abu Dhabi", isCorrect: false },
+          { text: "Bahrain", isCorrect: false },
+          { text: "Saudi Arabia", isCorrect: false },
+          { text: "Spa", isCorrect: true },
+        ],
+      },
+      {
+        text: "Who produces tyres for the F1 teams in 2023?",
+        answers: [
+          { text: "Pirelli", isCorrect: true },
+          { text: "Bridgestone", isCorrect: false },
+          { text: "Yamaha", isCorrect: false },
+          { text: "Halfords", isCorrect: false },
+        ],
+      },
+      {
+        text: "When was the maiden Formula 1 world championship?",
+        answers: [
+          { text: "1950", isCorrect: true },
+          { text: "1970", isCorrect: false },
+          { text: "1980", isCorrect: false },
+          { text: "1955", isCorrect: false },
+        ],
+      },
     ],
   };
 

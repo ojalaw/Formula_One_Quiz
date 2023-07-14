@@ -113,3 +113,51 @@ playButton.addEventListener("click", () => {
     // Show difficulty box
     difficultyBox.classList.remove("hidden");
 });
+
+// Difficulty level event listeners
+
+
+
+
+
+
+
+// startQuiz() function
+
+
+
+
+
+
+
+
+
+
+// loadQuiz() function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// nextButton event listener
+
+
+
+
+
+
+
+
+
+
+
+// handleAnswer() function

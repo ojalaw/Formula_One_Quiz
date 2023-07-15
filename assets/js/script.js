@@ -285,6 +285,7 @@ let questions = {
   // variables for keeping track of the index of the question and quiz difficulty
 let currentQuestionIndex;
 let difficulty;
+let score = 0; 
 
     // Get elements
 const playButton = document.querySelector("#play-button");
@@ -300,12 +301,22 @@ const nextButton = document.querySelector("#next-question");
 const completionBox = document.querySelector("#completion-box");
 const backButton = document.querySelector("#back-to-menu");
 
+// Function to increment score
+function incrementScore() {
+  score++;
+  updateScoreDisplay();
+}
+
+// Function to update the displayed score
+function updateScoreDisplay() {
+  const scoreText = document.getElementById("score");  // Replace "score" with the actual ID of your score display element
+  scoreText.innerText = score;
+}
+
 // Play button click handler
 playButton.addEventListener("click", () => {
-
     // Hide intro box
     introBox.classList.add("hidden");
-
     // Show difficulty box
     difficultyBox.classList.remove("hidden");
 });
@@ -326,6 +337,9 @@ function startQuiz(selectedDifficulty) {
     difficulty = selectedDifficulty;
     console.log(questions[difficulty].length);
     currentQuestionIndex = 0;
+    // Reset score
+    score = 0;
+    updateScoreDisplay(); // Update score display
     loadQuestion(questions[difficulty][currentQuestionIndex]);
   }
 
@@ -368,12 +382,17 @@ function handleAnswer(isCorrect, target) {
     if (buttons[i] === target) {
       buttons[i].classList.add(isCorrect ? 'correct' : 'incorrect');
     }
-  }
   // Update the answer message and make it visible
   answerMessage.textContent = isCorrect ? "Correct answer!" : "Incorrect answer!";
   answerMessage.classList.remove('hidden');
   // Show the next button
   nextButton.classList.remove("hidden");
+
+  // Increment score if the answer is correct
+}
+if(isCorrect) {
+  incrementScore();
+}
 }
 
 // nextButton event listener

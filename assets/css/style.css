@@ -6,6 +6,10 @@ body {
    flex-direction: column;
    height: 100vh;
  }
+
+ p {
+  font-size: 2rem;
+ }
  
  /*---header---*/
  #logo {
@@ -92,7 +96,8 @@ body {
    background-color: gray;
    border-radius: 15px;
    margin: auto;
- }
+   width: 60%;
+  }
  
 
  /*---answers---*/

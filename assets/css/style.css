@@ -105,4 +105,26 @@ body {
   background-color: red; 
 }
  
- 
+ /*---progress---*/ 
+#progressBar {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+#progressBarFull {
+  height: 30px;
+  width: 0%;
+  background-color: red;
+  border-radius: 5px;
+}
+
+/*---question/answer display---*/
+
+#question-display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.score-text, .question-counter {
+  font-size: 2rem;
+}

@@ -348,6 +348,11 @@ function loadQuestion(question) {
       });
       answersContainer.appendChild(answerButton);
     }
+    // Update the progress bar
+  progressBar.classList.remove("hidden");
+  const progressBarFull = document.getElementById('progressBarFull');
+  const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;
+  progressBarFull.style.width = `${progress}%`;
   }
 
 // Get the message element
@@ -388,6 +393,7 @@ nextButton.addEventListener("click", () => {
       quizBox.classList.add("hidden");
       console.log("Quiz complete!");
       completionBox.classList.remove("hidden");
+      progressBar.classList.add("hidden")
     }
   });
 

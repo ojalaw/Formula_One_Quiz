@@ -46,7 +46,7 @@ During the manual testing, I tested the sites functionality, usability and respo
 
 **Quiz Logic**
 
-During the initial phase of implementing the quiz logic, I realised that multiple answers could be selected for each individual question. To correct this, i appropriately modified the ternary operator that i had already included so that only one answer could be selected at a time for each question. I also realised that i had not added a message at the end of the quiz to notify users that the quiz was finished.
+During the initial phase of implementing the quiz logic, I realised that multiple answers could be selected for each individual question. To correct this, i appropriately modified the ternary operator that i had already included so that only one answer could be selected at a time for each question. I also realised that i had not added a message at the end of the quiz to notify users that the quiz was finished, to correct this, I added a short congratulatory message letting users know the quiz was finished, accomponied by a button which takes users back to the main menu.
 
 
 

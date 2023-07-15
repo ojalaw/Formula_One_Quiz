@@ -301,6 +301,11 @@ const nextButton = document.querySelector("#next-question");
 const completionBox = document.querySelector("#completion-box");
 const backButton = document.querySelector("#back-to-menu");
 
+document.querySelector('#rules-button').addEventListener('click', function() {
+  var rulesModal = new bootstrap.Modal(document.getElementById('rulesModal'), {});
+  rulesModal.show();
+});
+
 // Function to increment score
 function incrementScore() {
   score++;

@@ -112,7 +112,7 @@ body {
  
  /*---progress---*/ 
 #progressBar {
-  background-color: grey;
+  background-color: black;
   border-radius: 5px;
 }
 
@@ -133,3 +133,11 @@ body {
 .score-text, .question-counter {
   font-size: 2rem;
 }
+
+/*---modal---*/ 
+
+.modal-content {
+  color: black;
+  text-align: center;
+  }
+  

@@ -299,6 +299,7 @@ const questionText = document.querySelector("#question-text");
 const answersContainer = document.querySelector("#answers-container");
 const nextButton = document.querySelector("#next-question");
 const completionBox = document.querySelector("#completion-box");
+const completionText = document.querySelector('#completion-box p');
 const backButton = document.querySelector("#back-to-menu");
 
 document.querySelector('#rules-button').addEventListener('click', function() {
@@ -420,6 +421,7 @@ nextButton.addEventListener("click", () => {
       quizBox.classList.add("hidden");
       console.log("Quiz complete!");
       completionBox.classList.remove("hidden");
+      completionText.innerHTML = `Congratulations! You scored ${score} out of ${questions[difficulty].length}`;
       progressBar.classList.add("hidden")
     }
   });

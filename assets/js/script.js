@@ -308,9 +308,18 @@ document.querySelector('#rules-button').addEventListener('click', function() {
 });
 
 // Function to increment score
-function incrementScore() {
-  score++;
+function incrementScore(difficulty) {
+
+  if(difficulty === 'easy') {
+    score += 1;
+  } else if(difficulty === 'medium') { 
+    score += 5;
+  } else if(difficulty === 'hard') {
+    score += 10;
+  }
+
   updateScoreDisplay();
+
 }
 
 // Function to update the displayed score
@@ -400,7 +409,7 @@ function handleAnswer(isCorrect, target) {
 }
 console.log(isCorrect ? 'Correct!' : 'Incorrect!');
 if(isCorrect) {
-  incrementScore();
+  incrementScore(difficulty); 
 }
 console.log(score);
 }

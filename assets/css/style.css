@@ -140,4 +140,14 @@ body {
   color: black;
   text-align: center;
   }
-  
+
+  /*---podium---*/ 
+
+ .podium-title {
+  text-align: center;
+  text-transform: uppercase;
+ }
+
+ .podium-text {
+  text-align: center;
+ }

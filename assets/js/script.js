@@ -463,6 +463,12 @@ podiumButton.addEventListener("click", () => {
   }
 });
 
+let audio = new Audio('assets/audio/victory.mp3');
+
+document.getElementById("celebrateButton").addEventListener("click", function() {
+  audio.play();
+});
+
 
 
 

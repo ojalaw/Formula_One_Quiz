@@ -282,7 +282,7 @@ let questions = {
     ],
   };
 
-  // variables for keeping track of the index of the question and quiz difficulty
+  // variables for keeping track of the index of the question, quiz difficulty and score
 let currentQuestionIndex;
 let difficulty;
 let score = 0; 
@@ -353,7 +353,10 @@ function startQuiz(selectedDifficulty) {
 function loadQuestion(question) {
     // Update the question text
     questionText.textContent = question.text;
-  
+    // Update question number display
+  const totalQuestions = questions[difficulty].length;
+  const questionNum = currentQuestionIndex + 1;
+  progressText.textContent = `Q${questionNum}/${totalQuestions}`;
     // Clear any old answers
     answersContainer.innerHTML = '';
   

@@ -396,12 +396,13 @@ function handleAnswer(isCorrect, target) {
   answerMessage.classList.remove('hidden');
   // Show the next button
   nextButton.classList.remove("hidden");
-
+  console.log(isCorrect ? 'Correct!' : 'Incorrect!');
   // Increment score if the answer is correct
 }
 if(isCorrect) {
   incrementScore();
 }
+console.log(score);
 }
 
 // nextButton event listener
@@ -421,9 +422,13 @@ nextButton.addEventListener("click", () => {
       quizBox.classList.add("hidden");
       console.log("Quiz complete!");
       completionBox.classList.remove("hidden");
-      completionText.innerHTML = `Congratulations! You scored ${score} out of ${questions[difficulty].length}`;
-      progressBar.classList.add("hidden")
-    }
+      if(score >= 8) {
+        completionText.textContent = `Congratulations, you scored ${score}! Excellent job!`;
+      } else {
+        completionText.textContent = `Your score was ${score}. Better luck next time!`;
+      }
+        progressBar.classList.add("hidden")
+      }
   });
 
 backButton.addEventListener("click", () => {

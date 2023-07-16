@@ -449,6 +449,20 @@ backButton.addEventListener("click", () => {
   correctAnswers = 0;
 });
 
+// Get the podium button
+const podiumButton = document.querySelector("#podium-button");
+
+// Add event listener to the podium button
+podiumButton.addEventListener("click", () => {
+  if (correctAnswers >= 8) {
+    // Redirect to the podium page
+    window.location.href = "podium.html";
+  } else {
+    // Show alert message
+    alert("No podium celebrations for you today, return to the main menu and try to score enough points to reach the podium!");
+  }
+});
+
 
 
 

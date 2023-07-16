@@ -286,6 +286,7 @@ let questions = {
 let currentQuestionIndex;
 let difficulty;
 let score = 0; 
+let correctAnswers = 0;
 
     // Get elements
 const playButton = document.querySelector("#play-button");
@@ -410,6 +411,7 @@ function handleAnswer(isCorrect, target) {
 console.log(isCorrect ? 'Correct!' : 'Incorrect!');
 if(isCorrect) {
   incrementScore(difficulty); 
+  correctAnswers++;
 }
 console.log(score);
 }
@@ -431,19 +433,20 @@ nextButton.addEventListener("click", () => {
       quizBox.classList.add("hidden");
       console.log("Quiz complete!");
       completionBox.classList.remove("hidden");
-      if(score >= 8) {
-        completionText.textContent = `Congratulations, you scored ${score}! Excellent job!`;
+      if(correctAnswers >= 8) {
+        completionText.textContent = `Congratulations, you answered ${correctAnswers} questions correctly and scored ${score}! Excellent job!`;
       } else {
-        completionText.textContent = `Your score was ${score}. Better luck next time!`;
+        completionText.textContent = `You only answered ${correctAnswers} questions correctly. Your score of ${score} was net enough for the top 3,  Better luck next time!`;
       }
-        progressBar.classList.add("hidden")
-      }
+      progressBar.classList.add("hidden")
+    }
   });
 
 backButton.addEventListener("click", () => {
   // Reset the quiz and go back to the main menu
   introBox.classList.remove("hidden");
   completionBox.classList.add("hidden");
+  correctAnswers = 0;
 });
 
 

@@ -396,9 +396,9 @@ function handleAnswer(isCorrect, target) {
   answerMessage.classList.remove('hidden');
   // Show the next button
   nextButton.classList.remove("hidden");
-  console.log(isCorrect ? 'Correct!' : 'Incorrect!');
   // Increment score if the answer is correct
 }
+console.log(isCorrect ? 'Correct!' : 'Incorrect!');
 if(isCorrect) {
   incrementScore();
 }

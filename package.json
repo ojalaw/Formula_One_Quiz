@@ -1,0 +1,16 @@
+{
+  "name": "formula_one_quiz_mp2",
+  "version": "1.0.0",
+  "description": "Formula One Quiz is a quiz for users all levels of knowledge relating to Formula One. The quiz is all things Formula one when it comes to quiz content, style and symbology. The quiz is borken down into 3 sections for users that have limited knowledge (Rookie), those who have a general understanding of Formula One (Seasoned Driver) and Formula One Experts (Expert). It is an interactive quiz with users having a certain amount of time to choose an answer, a Formula One style scoring system has also been implemeneted. Throughout the site there a subtle features included to give the user an authentic Formula One quiz experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.1"
+  }
+}

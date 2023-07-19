@@ -282,13 +282,11 @@ let questions = {
     ],
   };
 
-  // variables for keeping track of the index of the question, quiz difficulty and score
 let currentQuestionIndex;
 let difficulty;
 let score = 0; 
 let correctAnswers = 0;
 
-    // Get elements
 const playButton = document.querySelector("#play-button");
 const introBox = document.querySelector("#intro-box");
 const difficultyBox = document.querySelector("#difficulty");
@@ -308,7 +306,6 @@ document.querySelector('#rules-button').addEventListener('click', function() {
   rulesModal.show();
 });
 
-// Function to increment score
 function incrementScore(difficulty) {
 
   if(difficulty === 'easy') {
@@ -323,55 +320,40 @@ function incrementScore(difficulty) {
 
 }
 
-// Function to update the displayed score
 function updateScoreDisplay() {
-  const scoreText = document.getElementById("score");  // Replace "score" with the actual ID of your score display element
+  const scoreText = document.getElementById("score"); 
   scoreText.innerText = score;
 }
 
-// Play button click handler
 playButton.addEventListener("click", () => {
-    // Hide intro box
     introBox.classList.add("hidden");
-    // Show difficulty box
     difficultyBox.classList.remove("hidden");
 });
 
-// Difficulty buttons event listener
 easyButton.addEventListener("click", () => startQuiz('easy'));
 mediumButton.addEventListener("click", () => startQuiz('medium'));
 hardButton.addEventListener("click", () => startQuiz('hard'));
 
-// startQuiz() function
 
 function startQuiz(selectedDifficulty) {
-    // Hide difficulty box
     difficultyBox.classList.add("hidden");
-    // Show the quiz
     quizBox.classList.remove("hidden");
-    // Get difficulty level from the button that was clicked
     difficulty = selectedDifficulty;
     console.log(questions[difficulty].length);
     currentQuestionIndex = 0;
-    // Reset score
     score = 0;
-    updateScoreDisplay(); // Update score display
+    updateScoreDisplay();
     loadQuestion(questions[difficulty][currentQuestionIndex]);
   }
 
-// loadQuiz() function
 
 function loadQuestion(question) {
-    // Update the question text
     questionText.textContent = question.text;
-    // Update question number display
   const totalQuestions = questions[difficulty].length;
   const questionNum = currentQuestionIndex + 1;
-  progressText.textContent = `Q${questionNum}/${totalQuestions}`;
-    // Clear any old answers
+  progressText.textContent = `Question ${questionNum}/${totalQuestions}`;
     answersContainer.innerHTML = '';
   
-    // Create a new button for each answer
     for (let i = 0; i < question.answers.length; i++) {
       let answer = question.answers[i];
       let answerButton = document.createElement("button");
@@ -381,32 +363,24 @@ function loadQuestion(question) {
       });
       answersContainer.appendChild(answerButton);
     }
-    // Update the progress bar
   progressBar.classList.remove("hidden");
   const progressBarFull = document.getElementById('progressBarFull');
   const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;
   progressBarFull.style.width = `${progress}%`;
   }
 
-// Get the message element
 const answerMessage = document.querySelector("#answer-message");
 
-// handleAnswer() function
 function handleAnswer(isCorrect, target) {
-  // Disable all buttons inside the answersContainer
   const buttons = answersContainer.getElementsByTagName('button');
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].disabled = true;
-    // Add 'correct' or 'incorrect' class to the selected button
     if (buttons[i] === target) {
       buttons[i].classList.add(isCorrect ? 'correct' : 'incorrect');
     }
-  // Update the answer message and make it visible
   answerMessage.textContent = isCorrect ? "Correct answer!" : "Incorrect answer!";
   answerMessage.classList.remove('hidden');
-  // Show the next button
   nextButton.classList.remove("hidden");
-  // Increment score if the answer is correct
 }
 console.log(isCorrect ? 'Correct!' : 'Incorrect!');
 if(isCorrect) {
@@ -416,20 +390,14 @@ if(isCorrect) {
 console.log(score);
 }
 
-// nextButton event listener
 nextButton.addEventListener("click", () => {
-    // Move to the next question
     currentQuestionIndex++;
     
-    // Check if there are more questions
     if(currentQuestionIndex < questions[difficulty].length) {
-      // Load the next question
       loadQuestion(questions[difficulty][currentQuestionIndex]);
-      // Hide the next button again
       nextButton.classList.add("hidden");
       answerMessage.classList.add("hidden")
     } else {
-      // End of the quiz! Hide the quiz box and show a message (score to be added)
       quizBox.classList.add("hidden");
       console.log("Quiz complete!");
       completionBox.classList.remove("hidden");
@@ -443,22 +411,17 @@ nextButton.addEventListener("click", () => {
   });
 
 backButton.addEventListener("click", () => {
-  // Reset the quiz and go back to the main menu
   introBox.classList.remove("hidden");
   completionBox.classList.add("hidden");
   correctAnswers = 0;
 });
 
-// Get the podium button
 const podiumButton = document.querySelector("#podium-button");
 
-// Add event listener to the podium button
 podiumButton.addEventListener("click", () => {
   if (correctAnswers >= 8) {
-    // Redirect to the podium page
     window.location.href = "podium.html";
   } else {
-    // Show alert message
     alert("No podium celebrations for you today, return to the main menu and try to score enough points to reach the podium!");
   }
 });

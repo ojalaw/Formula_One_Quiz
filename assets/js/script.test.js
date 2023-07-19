@@ -1,3 +1,8 @@
-it('runs test', () => {
-    expect(true).toBe(true); 
-  });
+const {startQuiz} = require('./script');
+
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+
+const dom = new JSDOM();
+
+startQuiz(); 

@@ -62,11 +62,13 @@ General knowledge quiz enthusiast. I want to play as many quizes as possible, I 
 
 Initial color scheme is general Dark theme with Black and Grey used for background colors white predominatly used for text and Red used as an accent colour. I have used this to give the site a modern contempary feel, the colour scheme is also similar to that of Formula One and has been used for symbolic purposes.
 
-Dark and Light color scheme
+![Image of color pallete in the project](README-images/color-wheel.png "Optional title")
 
 
 ### Typography
 This Formula One Quiz utilises One Google Font for Typography, Titillium Web has been used. This font has been chosen because it is the font that has been used by Formula One, this will give users an authentic feel to the quiz, especially users who are familiar with Formula One.
+
+![Google font used in the project](README-images/google-fonts.png "Optional title")
 
 
 ### Layout

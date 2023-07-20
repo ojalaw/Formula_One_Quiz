@@ -305,6 +305,11 @@ const backButton = document.querySelector("#back-to-menu");
 const submitButton = document.querySelector("#submit-score");
 const nameInput = document.querySelector("#name-input");
 const leaderboardButton = document.querySelector("#leaderboard-button");
+const correctSound = new Audio('assets/audio/correct.mp3');
+const incorrectSound = new Audio('assets/audio/incorrect.mp3');
+const startSound = new Audio('assets/audio/start.mp3');
+const congratulationsSound = new Audio('assets/audio/congratulations.mp3');
+const betterLuckNextTimeSound = new Audio('assets/audio/betterlucknexttime.mp3');
 
 leaderboardButton.addEventListener("click", () => {
     window.location.href = "leaderboard.html";
@@ -360,6 +365,8 @@ function startLights(level) {
           message.classList.add('message');
           container.appendChild(message);
 
+                   startSound.play();
+                  
           setTimeout(() => {
             container.removeChild(message);
             container.style.display = "none";
@@ -405,7 +412,7 @@ function loadQuestion(question) {
       answerButton.textContent = answer.text;
       answerButton.addEventListener("click", (event) => {
         handleAnswer(answer.isCorrect, event.target);
-        nextButton.classList.remove("hidden"); // Show the 'Next' button when an answer is selected
+        nextButton.classList.remove("hidden");
       });
       answersContainer.appendChild(answerButton);
     }
@@ -431,10 +438,12 @@ function handleAnswer(isCorrect, target) {
 }
 console.log(isCorrect ? 'Correct!' : 'Incorrect!');
 if(isCorrect) {
+  correctSound.play();
   incrementScore(difficulty); 
   correctAnswers++;
+}else {
+    incorrectSound.play();
 }
-console.log(score);
 }
 
 nextButton.addEventListener("click", () => {
@@ -450,8 +459,14 @@ nextButton.addEventListener("click", () => {
       completionBox.classList.remove("hidden");
       if(correctAnswers >= 8) {
         completionText.textContent = `Congratulations, you answered ${correctAnswers} questions correctly and scored ${score}! Excellent job!`;
+
+        congratulationsSound.play();
+        
       } else {
         completionText.textContent = `You only answered ${correctAnswers} questions correctly. Your score of ${score} was net enough for the top 3,  Better luck next time!`;
+
+betterLuckNextTimeSound.play();
+        
       }
       progressBar.classList.add("hidden")
     }

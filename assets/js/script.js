@@ -303,6 +303,7 @@ const completionBox = document.querySelector("#completion-box");
 const completionText = document.querySelector('#completion-box p');
 const backButton = document.querySelector("#back-to-menu");
 
+// Bootstrap modal
 document.querySelector('#rules-button').addEventListener('click', function() {
   var rulesModal = new bootstrap.Modal(document.getElementById('rulesModal'), {});
   rulesModal.show();
@@ -327,6 +328,43 @@ function updateScoreDisplay() {
   scoreText.innerText = score;
 }
 
+function startLights(level) {
+  document.querySelector("#container").style.display = "block";
+
+  const columns = Array.from(document.querySelectorAll('.column'));
+  const beep = new Audio('assets/audio/beep.mp3');
+
+  columns.forEach((column, i) => {
+      setTimeout(() => {
+          beep.currentTime = 0;
+          beep.play();
+
+          column.children[2].style.backgroundColor = 'red';
+          column.children[3].style.backgroundColor = 'red';
+
+          if (i === columns.length - 1) {
+              setTimeout(() => {
+                  document.querySelectorAll('.lights').forEach(lights => {
+                      lights.style.backgroundColor = 'black';
+                  });
+
+                 const message = document.createElement('div');
+        message.textContent = 'Lights out, away we go!';
+        message.classList.add('message');
+        container.appendChild(message);
+
+        setTimeout(() => {
+          container.removeChild(message);
+          container.style.display = "none";
+          quizBox.classList.remove("hidden");
+          loadQuestion(questions[difficulty][0]);
+        }, 3000);
+      }, 1000);
+    }
+  }, i * 1000);
+});
+}
+
 playButton.addEventListener("click", () => {
     introBox.classList.add("hidden");
     difficultyBox.classList.remove("hidden");
@@ -339,13 +377,11 @@ hardButton.addEventListener("click", () => startQuiz('hard'));
 
 function startQuiz(selectedDifficulty) {
     difficultyBox.classList.add("hidden");
-    quizBox.classList.remove("hidden");
     difficulty = selectedDifficulty;
-    console.log(questions[difficulty].length);
     currentQuestionIndex = 0;
     score = 0;
     updateScoreDisplay();
-    loadQuestion(questions[difficulty][currentQuestionIndex]);
+    startLights(difficulty);
   }
 
 
@@ -362,9 +398,11 @@ function loadQuestion(question) {
       answerButton.textContent = answer.text;
       answerButton.addEventListener("click", (event) => {
         handleAnswer(answer.isCorrect, event.target);
+        nextButton.classList.remove("hidden"); // Show the 'Next' button when an answer is selected
       });
       answersContainer.appendChild(answerButton);
     }
+    
   progressBar.classList.remove("hidden");
   const progressBarFull = document.getElementById('progressBarFull');
   const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;

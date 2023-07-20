@@ -1,5 +1,5 @@
 # FO-Quiz-MP2
-FO Quiz is a Formula 1 quiz for all levels of knowledge. The quiz is all things Formula one when it comes to quiz content, style and symbology.
+Formula One Quiz is a quiz for users all levels of knowledge relating to Formula One. The quiz is all things Formula one when it comes to quiz content, style and symbology. The quiz is borken down into 3 sections for users that have limited knowledge (Rookie), those who have a general understanding of Formula One (Seasoned Driver) and Formula One Experts (Expert). It is an interactive quiz with users having a certain amount of time to choose an answer, a Formula One style scoring system has also been implemeneted. Throughout the site there a subtle features included to give the user an authentic Formula One quiz experience.
 
 ## CONTENTS
 
@@ -41,39 +41,43 @@ FO Quiz is a Formula 1 quiz for all levels of knowledge. The quiz is all things 
 ### User Stories
 
 **User Story 1:** 
-
+User new to the Formula one environment and looking to build knowledge and test what I already know about the sport. I want to play a Formula One quiz for all levels of knowledge.
 
 
 **User Story 2:** 
-
+User who has been exposed to Formula One for last 12 months, I want to test my knowledge but i also want to chalenge myself by playing a quiz that I will find challenging.
 
 
 **User Story 3:** 
-
+Formula One super fan that has played multiple different Formula One quizes in the past. I want to play a quiz that not only tests and challeneges my knowledge of the sport but also has Formula One animations throughout the site.
 
 
 **User Story 4:** 
-
+General knowledge quiz enthusiast. I want to play as many quizes as possible, I have a good baseline knowledge of Formula One and i would like to play the quiz on multiple different levels of experience.
 
 
 ## Design  
 
 ### Colour Scheme
 
+Initial color scheme is general Dark theme with Black and Grey used for background colors white predominatly used for text and Red used as an accent colour. I have used this to give the site a modern contempary feel, the colour scheme is also similar to that of Formula One and has been used for symbolic purposes.
 
-
-
-
+![Image of color pallete in the project](README-images/color-wheel.png "Optional title")
 
 
 ### Typography
+This Formula One Quiz utilises One Google Font for Typography, Titillium Web has been used. This font has been chosen because it is the font that has been used by Formula One, this will give users an authentic feel to the quiz, especially users who are familiar with Formula One.
 
+![Google font used in the project](README-images/google-fonts.png "Optional title")
 
 
 ### Layout
 
 
+
+
 ### Symbology  
+I have put alot of thought into the symbology of the site. For example, many of the design and animation aspects have been done to closely match what can be seen in Formula One today. As previously mentioned, the gogle font used is the same as in Formula One, the scoring system matches the way that racers are scored. The audio that features throughout the site is very similar to what would be heard during a race day. The starting light procedure proior to the quiz is what one would see prior to a race starting and the displayed score at the end mimics end of race celebrations.
 
 
 ### Imagery

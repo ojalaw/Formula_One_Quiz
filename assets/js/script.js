@@ -329,40 +329,40 @@ function updateScoreDisplay() {
 }
 
 function startLights(level) {
-  document.querySelector("#container").style.display = "block";
+    document.querySelector("#container").style.display = "block";
 
-  const columns = Array.from(document.querySelectorAll('.column'));
-  const beep = new Audio('assets/audio/beep.mp3');
+    const columns = Array.from(document.querySelectorAll('.column'));
+    const beep = new Audio('assets/audio/beep.mp3');
 
-  columns.forEach((column, i) => {
-      setTimeout(() => {
-          beep.currentTime = 0;
-          beep.play();
-
-          column.children[2].style.backgroundColor = 'red';
-          column.children[3].style.backgroundColor = 'red';
-
-          if (i === columns.length - 1) {
-              setTimeout(() => {
-                  document.querySelectorAll('.lights').forEach(lights => {
-                      lights.style.backgroundColor = 'black';
-                  });
-
-                 const message = document.createElement('div');
-        message.textContent = 'Lights out, away we go!';
-        message.classList.add('message');
-        container.appendChild(message);
-
+    columns.forEach((column, i) => {
         setTimeout(() => {
-          container.removeChild(message);
-          container.style.display = "none";
-          quizBox.classList.remove("hidden");
-          loadQuestion(questions[difficulty][0]);
-        }, 3000);
-      }, 1000);
-    }
-  }, i * 1000);
-});
+            beep.currentTime = 0;
+            beep.play();
+
+            column.children[2].style.backgroundColor = 'red';
+            column.children[3].style.backgroundColor = 'red';
+
+            if (i === columns.length - 1) {
+                setTimeout(() => {
+                    document.querySelectorAll('.lights').forEach(lights => {
+                        lights.style.backgroundColor = 'black';
+                    });
+
+                   const message = document.createElement('div');
+          message.textContent = 'Lights out, away we go!';
+          message.classList.add('message');
+          container.appendChild(message);
+
+          setTimeout(() => {
+            container.removeChild(message);
+            container.style.display = "none";
+            quizBox.classList.remove("hidden");
+            loadQuestion(questions[difficulty][0]);
+          }, 3000);
+        }, 1000);
+      }
+    }, i * 1000);
+  });
 }
 
 playButton.addEventListener("click", () => {
@@ -382,32 +382,32 @@ function startQuiz(selectedDifficulty) {
     score = 0;
     updateScoreDisplay();
     startLights(difficulty);
-  }
+}
 
 
 function loadQuestion(question) {
     questionText.textContent = question.text;
-  const totalQuestions = questions[difficulty].length;
-  const questionNum = currentQuestionIndex + 1;
-  progressText.textContent = `Question ${questionNum}/${totalQuestions}`;
+    const totalQuestions = questions[difficulty].length;
+    const questionNum = currentQuestionIndex + 1;
+    progressText.textContent = `Question ${questionNum}/${totalQuestions}`;
     answersContainer.innerHTML = '';
-  
+
     for (let i = 0; i < question.answers.length; i++) {
       let answer = question.answers[i];
       let answerButton = document.createElement("button");
       answerButton.textContent = answer.text;
       answerButton.addEventListener("click", (event) => {
         handleAnswer(answer.isCorrect, event.target);
-        nextButton.classList.remove("hidden"); // Show the 'Next' button when an answer is selected
+        nextButton.classList.remove("hidden");
       });
       answersContainer.appendChild(answerButton);
     }
-    
-  progressBar.classList.remove("hidden");
-  const progressBarFull = document.getElementById('progressBarFull');
-  const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;
-  progressBarFull.style.width = `${progress}%`;
-  }
+
+    progressBar.classList.remove("hidden");
+    const progressBarFull = document.getElementById('progressBarFull');
+    const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;
+    progressBarFull.style.width = `${progress}%`;
+}
 
 const answerMessage = document.querySelector("#answer-message");
 
@@ -455,21 +455,3 @@ backButton.addEventListener("click", () => {
   completionBox.classList.add("hidden");
   correctAnswers = 0;
 });
-
-const podiumButton = document.querySelector("#podium-button");
-
-podiumButton.addEventListener("click", () => {
-  if (correctAnswers >= 8) {
-    window.location.href = "podium.html";
-  } else {
-    alert("No podium celebrations for you today, return to the main menu and try to score enough points to reach the podium!");
-  }
-});
-
-
-
-
-
-
-
-

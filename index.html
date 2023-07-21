@@ -50,42 +50,58 @@
         </div>
       </div>
     </div>
-  <div id ="intro-box">
-  <h1>Formula One Quiz</h1>
-  <button id="play-button">Play</button>
-  <button id="rules-button">Rules</button>
-  <button id="leaderboard-button">Leaderboard</button>
-</div>
-<div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="rulesModalLabel">Rules</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p> - The quiz is made of of three different difficulty levels: Rookie (easy), Seasoned Driver (Medium) and Expert (hard).
-        </p>
-        <p> - There are 10 questions in each difficulty level.</p>
-        <p> - Users will only get one attempt at each question.</p>
-        <p> - If the user has the correct answer they will be notified and the answer will turn green.</p>
-        <p> - If the user has the incorrect answer they will be notified and the answer will turn red.</p>
-        <p> - 1 point is scored for each correct answer.</p>
-        <p> - If the user gets the answer incorrect, the correct answer will not be displayed!</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <div id="page-title"><h1 class="page-title">Formula One Quiz</h1></div>
+    <div class="tyre-sphere-container">
+    <div class="tyre-sphere">
+      <img src="assets/images/tyre.png" alt="Spinning tyre">
+    </div>
+  </div>
+    <div id ="intro-box">
+      <p>Think you have what it takes?</p>
+    <button id="play-button">Play</button>
+    <button id="rules-button">Rules</button>
+    <button id="leaderboard-button">Leaderboard</button>
+  </div>
+  <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="rulesModalLabel">Rules</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p> - The quiz is made of of three different difficulty levels: Rookie (easy), Seasoned Driver (Medium) and Expert (hard).
+          </p>
+          <p> - There are 10 questions in each difficulty level.</p>
+          <p> - Users will only get one attempt at each question.</p>
+          <p> - If the user has the correct answer they will be notified and the answer will turn green.</p>
+          <p> - If the user has the incorrect answer they will be notified and the answer will turn red.</p>
+          <p> - 1 point is scored for each correct answer.</p>
+          <p> - If the user gets the answer incorrect, the correct answer will not be displayed!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
+<div id="difficulty" class="quiz-box hidden">
+  <p>Difficulty Level</p>
+<div id="difficulty-inner">
+  <div class="difficulty-option">
+    <img src="assets/images/easy.jpg" alt="Rookie Image">
+    <button id="easy">Rookie</button>
+  </div>
+  <div class="difficulty-option">
+    <img src="assets/images/medium.jpg" alt="Seasoned Driver Image">
+    <button id="medium">Seasoned Driver</button> 
+  </div>
+  <div class="difficulty-option">
+    <img src="assets/images/hard.jpg" alt="Expert Image">
+    <button id="hard">Expert</button>
+  </div>
 </div>
-  <div id="difficulty" class="quiz-box hidden">
-    <div id="difficulty-inner">
-  <button id="easy">Rookie</button>
-  <button id="medium">Seasoned Driver</button> 
-  <button id="hard">Expert</button>
-      </div>
-    </div>
+</div>
     <div id="quiz" class="quiz-box hidden">
       <div id="question-display">
         <div id="question-section">

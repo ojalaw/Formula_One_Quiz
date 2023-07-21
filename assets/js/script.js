@@ -325,6 +325,10 @@ const allSounds = [
 
 muteButton.addEventListener("click", toggleMute);
 
+document.getElementById('play-button').addEventListener('click', function() {
+  document.querySelector('.tyre-sphere-container').style.display = 'none';
+});
+
 function toggleMute() { 
   isMuted = !isMuted; 
   const muteButton = document.getElementById("mute-button");
@@ -409,6 +413,7 @@ function startLights(level) {
 
 playButton.addEventListener("click", () => {
     introBox.classList.add("hidden");
+    document.getElementById('page-title').classList.add('hidden');
     difficultyBox.classList.remove("hidden");
 });
 

@@ -50,6 +50,21 @@ body {
     background-color: red;
     color: white;
   }
+
+  /*---page-style---*/ 
+#page-title {
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 30px;
+  padding: 5px;
+}
+
+.page-title {
+ background-color: gray;
+ display: inline-block;
+ border-radius: 5px;
+ padding: 5px;
+}
   
   /*--intro-box---*/
   
@@ -58,7 +73,6 @@ body {
     padding: 20px;
     background-color: gray;
     border-radius: 15px;
-    margin: auto;
   }
   
   #intro-box h1 {
@@ -66,39 +80,103 @@ body {
     margin-bottom: 20px;
   }
   
-  /*---button---*/
-  
-  button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    font-family: Titillium Web;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+   /*---button---*/
+ 
+ button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-family: Titillium Web;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 0 4px black;
+}
+
+/*---mute-button---*/
+
+#mute-button {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+}
+
+#mute-button:hover {
+ background-color: red;
+}
+
+/*---tyre-animation---*/
+
+.tyre-sphere-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.tyre-sphere {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tyre-sphere img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotate-tyre 10s linear infinite;
+}
+
+@keyframes rotate-tyre {
+  from {
+    transform: rotate(0deg);
   }
-  
-  button:hover {
-    opacity: 0.7;
-    background-color: red;
+  to {
+    transform: rotate(360deg);
   }
-  
-  /*---difficulty---*/
-  
-  .hidden {
-    display: none; 
-  }
-  
-  .quiz-box {
-    text-align: center;
-    padding: 20px;
-    background-color: gray;
-    border-radius: 15px;
-    margin: auto;
-    width: 60%;
-   }
-  
+}
+
+ /*---difficulty---*/
+ 
+ .hidden {
+  display: none; 
+}
+
+.quiz-box {
+  text-align: center;
+  padding: 20px;
+  background-color: gray;
+  border-radius: 15px;
+ }
+
+.difficulty-option {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center; 
+}
+
+.difficulty-option img {
+ display: block; 
+ margin: 0 auto;  
+}
+
+img {
+ width: 308px;
+ height: 308px;
+ border-radius: 10px;
+ padding: 10px;
+}
+
+#difficulty-inner {
+ display: flex;
+ justify-content: space-around; 
+ flex-wrap: wrap;
+}
  
   /*---answers---*/
   
@@ -140,17 +218,6 @@ body {
    color: black;
    text-align: center;
    }
- 
-   /*---podium---*/ 
- 
-  .podium-title {
-   text-align: center;
-   text-transform: uppercase;
-  }
- 
-  .podium-text {
-   text-align: center;
-  }
  
  /*---starting-lights---*/ 
  
@@ -225,11 +292,4 @@ color: black;
 #leaderboard-table th {
   font-weight: bold; 
   background-color: #ccc;
-}
-
-/*---mute-button---*/ 
-#mute-button {
-  position: fixed;
-  top: 100px;
-  right: 100px;
 }

@@ -286,6 +286,7 @@ let currentQuestionIndex;
 let difficulty;
 let score = 0; 
 let correctAnswers = 0;
+let isMuted = false;
 
 
 
@@ -305,11 +306,39 @@ const backButton = document.querySelector("#back-to-menu");
 const submitButton = document.querySelector("#submit-score");
 const nameInput = document.querySelector("#name-input");
 const leaderboardButton = document.querySelector("#leaderboard-button");
+const muteButton = document.getElementById("mute-button");
 const correctSound = new Audio('assets/audio/correct.mp3');
 const incorrectSound = new Audio('assets/audio/incorrect.mp3');
 const startSound = new Audio('assets/audio/start.mp3');
 const congratulationsSound = new Audio('assets/audio/congratulations.mp3');
 const betterLuckNextTimeSound = new Audio('assets/audio/betterlucknexttime.mp3');
+const beep = new Audio('assets/audio/beep.mp3');
+
+const allSounds = [
+  correctSound,
+  incorrectSound,
+  startSound,
+  congratulationsSound,
+  betterLuckNextTimeSound,
+  beep
+];
+
+muteButton.addEventListener("click", toggleMute);
+
+function toggleMute() { 
+  isMuted = !isMuted; 
+  const muteButton = document.getElementById("mute-button");
+  muteButton.innerText = isMuted ? 'Unmute sound' : 'Mute sound';
+  
+  allSounds.forEach((sound) => {
+    sound.muted = isMuted;
+  });
+  if (isMuted) {
+    muteButton.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+  } else {
+    muteButton.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+  }
+} 
 
 leaderboardButton.addEventListener("click", () => {
     window.location.href = "leaderboard.html";
@@ -344,7 +373,6 @@ function startLights(level) {
     document.querySelector("#container").style.display = "block";
 
     const columns = Array.from(document.querySelectorAll('.column'));
-    const beep = new Audio('assets/audio/beep.mp3');
 
     columns.forEach((column, i) => {
         setTimeout(() => {

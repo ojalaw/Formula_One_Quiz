@@ -226,3 +226,10 @@ color: black;
   font-weight: bold; 
   background-color: #ccc;
 }
+
+/*---mute-button---*/ 
+#mute-button {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+}

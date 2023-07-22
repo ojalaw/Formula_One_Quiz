@@ -329,6 +329,14 @@ document.getElementById('play-button').addEventListener('click', function() {
   document.querySelector('.tyre-sphere-container').style.display = 'none';
 });
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; 
+  }
+  return array;
+}
+
 function toggleMute() { 
   isMuted = !isMuted; 
   const muteButton = document.getElementById("mute-button");
@@ -423,37 +431,44 @@ hardButton.addEventListener("click", () => startQuiz('hard'));
 
 
 function startQuiz(selectedDifficulty) {
-    difficultyBox.classList.add("hidden");
-    difficulty = selectedDifficulty;
-    currentQuestionIndex = 0;
-    score = 0;
-    updateScoreDisplay();
-    startLights(difficulty);
+  difficultyBox.classList.add("hidden");
+  difficulty = selectedDifficulty;
+questions[difficulty] = shuffleArray(questions[difficulty]);
+  currentQuestionIndex = 0;
+  score = 0;
+  updateScoreDisplay();
+  startLights(difficulty);
 }
 
 
 function loadQuestion(question) {
-    questionText.textContent = question.text;
-    const totalQuestions = questions[difficulty].length;
-    const questionNum = currentQuestionIndex + 1;
-    progressText.textContent = `Question ${questionNum}/${totalQuestions}`;
-    answersContainer.innerHTML = '';
+  questionText.textContent = question.text;
+  const totalQuestions = questions[difficulty].length;
+  const questionNum = currentQuestionIndex + 1;
+  progressText.textContent = `Question ${questionNum}/${totalQuestions}`;
+  answersContainer.innerHTML = '';
 
-    for (let i = 0; i < question.answers.length; i++) {
-      let answer = question.answers[i];
-      let answerButton = document.createElement("button");
-      answerButton.textContent = answer.text;
-      answerButton.addEventListener("click", (event) => {
-        handleAnswer(answer.isCorrect, event.target);
-        nextButton.classList.remove("hidden");
-      });
-      answersContainer.appendChild(answerButton);
-    }
+  let shuffledAnswers = [...question.answers];
+  for (let i = shuffledAnswers.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledAnswers[i], shuffledAnswers[j]] = [shuffledAnswers[j], shuffledAnswers[i]];
+  }
 
-    progressBar.classList.remove("hidden");
-    const progressBarFull = document.getElementById('progressBarFull');
-    const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;
-    progressBarFull.style.width = `${progress}%`;
+  for (let i = 0; i < shuffledAnswers.length; i++) {
+    let answer = shuffledAnswers[i];
+    let answerButton = document.createElement("button");
+    answerButton.textContent = answer.text;
+    answerButton.addEventListener("click", (event) => {
+      handleAnswer(answer.isCorrect, event.target);
+      nextButton.classList.remove("hidden");
+    });
+    answersContainer.appendChild(answerButton);
+  }
+
+  progressBar.classList.remove("hidden");
+  const progressBarFull = document.getElementById('progressBarFull');
+  const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;
+  progressBarFull.style.width = `${progress}%`;
 }
 
 const answerMessage = document.querySelector("#answer-message");

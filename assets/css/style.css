@@ -293,3 +293,13 @@ color: black;
   font-weight: bold; 
   background-color: #ccc;
 }
+
+/*---timer---*/
+#timer {
+  margin-top: 20px;
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  
+}

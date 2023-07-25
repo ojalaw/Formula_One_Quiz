@@ -288,8 +288,6 @@ let score = 0;
 let correctAnswers = 0;
 let isMuted = false;
 
-
-
 const playButton = document.querySelector("#play-button");
 const introBox = document.querySelector("#intro-box");
 const difficultyBox = document.querySelector("#difficulty");
@@ -324,10 +322,49 @@ const allSounds = [
 ];
 
 muteButton.addEventListener("click", toggleMute);
-
 document.getElementById('play-button').addEventListener('click', function() {
   document.querySelector('.tyre-sphere-container').style.display = 'none';
 });
+
+let timerInterval;
+let timerExpired = false;
+let timeLeft = 15;
+  const timerElement = document.getElementById("timer");
+
+ function startTimer() {
+  clearInterval(timerInterval);
+  timerElement.textContent = timeLeft;
+
+  function updateTimer() {
+    timerElement.textContent = timeLeft;
+    if (timeLeft >= 11) {
+      timerElement.style.color = "green";
+    } else if (timeLeft >= 6) {
+      timerElement.style.color = "orange";
+    } else {
+      timerElement.style.color = "red";
+    }
+    if (timeLeft <= 0 && !timerExpired) {
+      timerExpired = true;
+      const buttons = answersContainer.getElementsByTagName("button");
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+        buttons[i].classList.add('incorrect');
+      }
+      incorrectSound.play();
+      answerMessage.textContent = "Time's up! Incorrect answer!";
+      answerMessage.classList.remove('hidden');
+      setTimeout(() => {
+        nextButton.click();
+      }, 1500);
+      return;
+    }
+    timeLeft--;
+  }
+  updateTimer();
+
+  timerInterval = setInterval(updateTimer, 1000);
+}
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -429,7 +466,6 @@ easyButton.addEventListener("click", () => startQuiz('easy'));
 mediumButton.addEventListener("click", () => startQuiz('medium'));
 hardButton.addEventListener("click", () => startQuiz('hard'));
 
-
 function startQuiz(selectedDifficulty) {
   difficultyBox.classList.add("hidden");
   difficulty = selectedDifficulty;
@@ -440,8 +476,8 @@ questions[difficulty] = shuffleArray(questions[difficulty]);
   startLights(difficulty);
 }
 
-
 function loadQuestion(question) {
+  timerExpired = false;
   questionText.textContent = question.text;
   const totalQuestions = questions[difficulty].length;
   const questionNum = currentQuestionIndex + 1;
@@ -469,6 +505,11 @@ function loadQuestion(question) {
   const progressBarFull = document.getElementById('progressBarFull');
   const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;
   progressBarFull.style.width = `${progress}%`;
+
+  timeLeft = 15;
+  timerElement.textContent = timeLeft;
+
+  startTimer();
 }
 
 const answerMessage = document.querySelector("#answer-message");
@@ -504,6 +545,7 @@ nextButton.addEventListener("click", () => {
     } else {
       quizBox.classList.add("hidden");
       console.log("Quiz complete!");
+      clearInterval(timerInterval); 
       completionBox.classList.remove("hidden");
       if(correctAnswers >= 8) {
         completionText.textContent = `Congratulations, you answered ${correctAnswers} questions correctly and scored ${score}! Excellent job!`;

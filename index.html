@@ -11,9 +11,25 @@
 </head>
 <body>
   <header>
+    <nav class="navbar navbar-expand-lg navbar-light flex-row">
         <a href="index.html">
             <h1 id="logo"><i class="fa-solid fa-flag-checkered"></i> 41Q</h1>
         </a>
+        <button class="navbar-toggler toggle-right" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="leaderboard.html">Leaderboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     </header>
     <button type="button" id="mute-button"><i class="fa-solid fa-volume-high"></i></button>
     <div id="container" class="hidden">
@@ -58,9 +74,9 @@
   </div>
     <div id ="intro-box">
       <p>Think you have what it takes?</p>
-    <button id="play-button">Play</button>
-    <button id="rules-button">Rules</button>
-    <button id="leaderboard-button">Leaderboard</button>
+    <button id="play-button" class = "generic-button">Play</button>
+    <button id="rules-button" class = "generic-button">Rules</button>
+    <button id="leaderboard-button" class = "generic-button">Leaderboard</button>
   </div>
   <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -90,15 +106,15 @@
 <div id="difficulty-inner">
   <div class="difficulty-option">
     <img src="assets/images/easy.jpg" alt="Rookie Image">
-    <button id="easy">Rookie</button>
+    <button id="easy" class = "generic-button">Rookie</button>
   </div>
   <div class="difficulty-option">
     <img src="assets/images/medium.jpg" alt="Seasoned Driver Image">
-    <button id="medium">Seasoned Driver</button> 
+    <button id="medium" class = "generic-button">Seasoned Driver</button> 
   </div>
   <div class="difficulty-option">
     <img src="assets/images/hard.jpg" alt="Expert Image">
-    <button id="hard">Expert</button>
+    <button id="hard" class = "generic-button">Expert</button>
   </div>
 </div>
 </div>
@@ -127,14 +143,14 @@
       <p id="question-text"></p>
       <p id="answer-message" class="hidden"></p>
       <div id="answers-container"></div>
-      <button id="next-question" class="hidden">Next Question</button>
+      <button id="next-question" class="hidden generic-button">Next Question</button>
     </div>
     <div id="completion-box" class="quiz-box hidden">
       <p id="completion-text"></p>
       <label for="name-input">Enter your name:</label>
       <input type="text" id="name-input" placeholder="Your name" required>
-      <button id="submit-score">Submit</button>
-      <button id="back-to-menu">Back to Main Menu</button>
+      <button class = "generic-button" id="submit-score">Submit</button>
+      <button class = "generic-button" id="back-to-menu">Back to Main Menu</button>
     </div>
     <script src="assets/js/script.js"></script>
 

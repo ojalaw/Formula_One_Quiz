@@ -51,6 +51,58 @@ body {
     color: white;
   }
 
+  /*---navbar---*/
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.nav-link {
+  padding: 0.2rem 1rem;
+  margin: 0.3rem;
+  letter-spacing: 0.3rem;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  border-color: white;
+  display: inline-block;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.page-nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.page-nav-item {
+  margin-left: 28px;
+  margin-right: 28px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.page-nav-item:hover {
+  border-color: white;
+}
+
+.toggle-right {
+  position: absolute;
+  right: 0;
+  margin-right: 20px; 
+}
+
   /*---page-style---*/ 
 #page-title {
   text-align: center;
@@ -147,9 +199,13 @@ button:hover {
 }
 
 .quiz-box {
+  justify-content: center;
+  margin-top: 200px;
+  align-self: center;
   text-align: center;
-  padding: 20px;
   background-color: gray;
+  padding: 20px;
+  width: 80rem;
   border-radius: 15px;
  }
 
@@ -187,6 +243,13 @@ img {
  .incorrect {
    background-color: red; 
  }
+
+ .answer-button, .generic-button {
+  width: 300px;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+}
   
   /*---progress---*/ 
  #progressBar {

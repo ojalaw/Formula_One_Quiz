@@ -288,6 +288,32 @@ let score = 0;
 let correctAnswers = 0;
 let isMuted = false;
 
+const correctFeedback = [
+  "You know your stuff!",
+  "Are you an F1 driver in disguise?",
+  "The paddock is stunned you've got that right!",
+  "Correct!",
+  "You're doing SO good!",
+  "Well done!",
+  "Absolutely right!",
+  "You're absolutely nailing this!",
+  "Keep going like this!",
+  "Great job, keep going!",
+];
+
+const incorrectFeedback = [
+  "Highly embarassing.",
+  "Wow, that was an easy one too!",
+  "Keep trying, not expecting much",
+  "well... no comment.",
+  "Surely you'll get the next one.",
+  "Computer says no.",
+  "Surely you'll get the next one?",
+  "This is getting awkward.",
+  "Go have a little lie down.",
+  "You missed this one, try the next one.",
+];
+
 const playButton = document.querySelector("#play-button");
 const introBox = document.querySelector("#intro-box");
 const difficultyBox = document.querySelector("#difficulty");
@@ -522,7 +548,10 @@ function handleAnswer(isCorrect, target) {
     if (buttons[i] === target) {
       buttons[i].classList.add(isCorrect ? 'correct' : 'incorrect');
     }
-  answerMessage.textContent = isCorrect ? "Correct answer!" : "Incorrect answer!";
+    let feedbackMessage = isCorrect 
+    ? correctFeedback[Math.floor(Math.random() * correctFeedback.length)] 
+    : incorrectFeedback[Math.floor(Math.random() * incorrectFeedback.length)];
+answerMessage.textContent = (isCorrect ? "Correct answer! " : "Incorrect answer! ") + feedbackMessage;
   answerMessage.classList.remove('hidden');
   nextButton.classList.remove("hidden");
 }

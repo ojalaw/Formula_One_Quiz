@@ -10,6 +10,16 @@ body {
   p {
    font-size: 2rem;
   }
+
+ label {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+  }
+
+  input::placeholder {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.5rem;
+  }
   
   /*---header---*/
   #logo {
@@ -60,6 +70,7 @@ body {
 .nav-link {
   padding: 0.2rem 1rem;
   margin: 0.3rem;
+  font-size: 1.5rem;
   letter-spacing: 0.3rem;
   border-bottom: 1px solid transparent;
   transition: all 0.4s ease-in-out;
@@ -125,6 +136,7 @@ body {
     padding: 20px;
     background-color: gray;
     border-radius: 15px;
+    margin: 20px auto;
   }
   
   #intro-box h1 {
@@ -136,7 +148,7 @@ body {
  
  button {
   display: block;
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 10px 20px;
   font-family: Titillium Web;
   font-size: 16px;
@@ -154,6 +166,7 @@ button:hover {
   position: fixed;
   top: 100px;
   right: 100px;
+  z-index: 100;
 }
 
 #mute-button:hover {
@@ -200,14 +213,21 @@ button:hover {
 
 .quiz-box {
   justify-content: center;
-  margin-top: 200px;
+  margin: 100px 20px;
   align-self: center;
   text-align: center;
   background-color: gray;
   padding: 20px;
-  width: 80rem;
+  max-width: 80rem;
+  width: calc(100% - 40px);
   border-radius: 15px;
  }
+
+ #difficulty {
+  width: fit-content;
+  padding: 20px;
+  margin-top: 50px; 
+}
 
 .difficulty-option {
  display: flex;
@@ -231,7 +251,7 @@ img {
 #difficulty-inner {
  display: flex;
  justify-content: space-around; 
- flex-wrap: wrap;
+ flex-direction: row;
 }
  
   /*---answers---*/
@@ -339,9 +359,11 @@ text-align: center;
 }
 
 #leaderboard-table {
-  width: 100%;
+  width: 80%;
   border-collapse: separate; 
   border-spacing: 10px; 
+  margin: auto;
+  text-align: center;
 }
 
 #leaderboard-table th,
@@ -365,4 +387,10 @@ color: black;
   border-radius: 10px;
   padding: 5px;
   
+}
+
+@media (max-width: 1200px) {
+  #difficulty-inner {
+    flex-direction: column;
+  }
 }

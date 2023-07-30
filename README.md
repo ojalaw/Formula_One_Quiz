@@ -72,8 +72,23 @@ This Formula One Quiz utilises One Google Font for Typography, Titillium Web has
 
 
 ### Layout
+I initially intended on using a single HTML page and using DOM manipulation to cycle through the different stages of the quiz and changing the style when appropriate. I have achieved this for the active part of the quiz and added an additional HTML page for the leaderboard which utilises local storage to display users scores.
+The interactive part of the quiz that manipulates the DOM can be broken down into 5 key stages before the leaderboard is displayed;
 
+**Intro**
+this is the stage of the quiz where the user can play the quiz, check the rules of the quiz and also check the current leaderboard.
 
+**Difficulty Selection**
+This is the stage of the quiz where the user can choose 1 of three different difficulty levels in the quiz Rookie (easy), Seasoned Driver (medium) or Expert ~(hard).
+
+**Starting Light Procedure**
+This stage of the quiz is an animation used to try and enhance the users experience and bring real life Formula 1 into the quiz.
+
+**The Quiz**
+This is the stage of the quiz where the user is presented with the difficulty level of the quiz that they have selected. Each difficulty level consists of 10 questions, users have 15 seconds per question to answer before the timer runs out. If the timer runs out, the user has automatically recieved an incorrect answer for that question. The user has 4 answers to choose from, once the user has selected an answer, the quiz will load the next question after a short delay. The user will then be notified if they got the answer correct or not and also recieve a feedback message. There is a scoring system for each difficulty level, correct answers will be awarded with 1 point on Rookie difficaulty, 5 points on seasoned driver difficulty and 10 points on expert difficulty.
+
+**Completion**
+Once the quiz is finished, users will be presented with a page that tells the user how much they have scored in the quiz and gives them the option to submit their name to the leaderboard, their is also on option to return to the main menu, in this case, the intro box.
 
 
 ### Symbology  
@@ -82,20 +97,77 @@ I have put alot of thought into the symbology of the site. For example, many of 
 
 ### Imagery
 
-
+TBD
 
 ### Wireframes
 
+[41Q Wireframe](README-images/41Q-wireframe-mk2.pdf "Link to 41Q wireframe")
 
-
-    
 
 ### Future updates
-
+The are a number of updates i would like to implement in the future. One update that could be included is a light/dark version of the quiz. I would also like to add more Formula 1 related animations, audio and images on the site.In addition, a leaderboard that extends further than local storage and has a database attached to it.
 
 ## Features
 
-### General features on every page
+### General features
+
+**Spinning Tyre**
+I used an image of a Formula 1 car tyre and used CSS to rotate the car clockwise, mimicing an actual Formula 1 car. 
+
+![Image of spinning tyre](README-images/spinning-tyre.png "Optional title")
+
+**Mute button**
+I inluded a mute button to give user control of audio that has been included on the site. 
+
+![Image of mute button](README-images/mute-button.png "Optional title")
+
+**Starting Light animation/Start Message**
+I included a number of different rectangles and circles and using a combination of CSS/Javascript, managed to create a starting light procedure with associated audio with a start message.
+
+![Image of starting light animation](README-images/starting-light.png "Optional title")
+
+**Question Counter**
+I included a question counter and accomponying progress bar for better user experience. This will count questions up for 1-10 and the progress bar will fill accordingly.
+
+![Image of question-counter](README-images/question-counter.png "Optional title")
+
+**Timer**
+I included a timer that counts down from 15 with the color changing when the time reaches a certain point. 15-11 is in the color red, 6-10 is the color amber and 5-1 is the color red.
+
+![Image of timer](README-images/timer.png "Optional title")
+
+**Score**
+The score counter is as previouslt mentioned, correct answers will be awarded with 1 point on Rookie difficaulty, 5 points on seasoned driver difficulty and 10 points on expert difficulty.
+
+![Image of score system](README-images/score-system.png "Optional title")
+
+**Correct Answer**
+If users answer a question correctly, they recieve a 'correct answer!' message and a random positive message. The correct answer button will also change color to green.
+
+![Image of correct answer button](README-images/correct-answer-button.png "Optional title")
+
+![Image of correct answer feedback](README-images/correct-answer-feedback.png "Optional title")
+
+**Incorrect Answer**
+If users answer a question incorrectly, they recieve an 'incorrect answer' message and a random negative message. The selected answer will also change color to red.
+
+![Image of incorrect answer button](README-images/incorrect-answer-button.png "Optional title")
+
+![Image of incorrect answer feedback](README-images/incorrect-answer-feedback.png "Optional title")
+
+**Quiz End Message**
+If have also added a message to be displayed to the user depending on how well they have done in the quiz. If they scored one of the top 3 scores for that difficulty, it is a congratulatory message, anything else is 'better luck next time'
+
+![Image of quiz end message](README-images/quiz-end-message.png "Optional title")
+
+**Leaderboard**
+I have given users the option of entering their name so that they can be displayed on a leaderboard on their local storage.
+
+![Image of leaderboard](README-images/leaderboard.png "Optional title")
+
+**Audio**
+I have used various different audio. 
+I used 'beeping' audio to simulate startling light procedure. Feedback audio depending on whether the answer was correct or not. A correct answer will play an impact wrench audio which is widely used in Formula 1, an incorrect answer will result in the generic 'incorrect answer' buzz. Also, If the user recieves a congratulatory message at the end of the quiz, they will be presented with a crowd cheering, if it is a 'better luck next time' message, they will be presented with a sad sounding trumpet.
 
 
 ### Future Implementations

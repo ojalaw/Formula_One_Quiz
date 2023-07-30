@@ -471,6 +471,7 @@ function startLights(level) {
                    startSound.play();
                   
           setTimeout(() => {
+            document.getElementById("difficulty-level").classList.remove("hidden");
             container.removeChild(message);
             container.style.display = "none";
             quizBox.classList.remove("hidden");
@@ -499,6 +500,16 @@ questions[difficulty] = shuffleArray(questions[difficulty]);
   currentQuestionIndex = 0;
   score = 0;
   updateScoreDisplay();
+  const difficultyLevelElement = document.getElementById("difficulty-level");
+  let difficultyName;
+  if (selectedDifficulty === 'easy') {
+    difficultyName = 'Rookie';
+  } else if (selectedDifficulty === 'medium') {
+    difficultyName = 'Seasoned Driver';
+  } else if (selectedDifficulty === 'hard') {
+    difficultyName = 'Expert';
+  }
+  difficultyLevelElement.textContent = difficultyName;
   startLights(difficulty);
 }
 
@@ -574,6 +585,7 @@ nextButton.addEventListener("click", () => {
       answerMessage.classList.add("hidden")
     } else {
       quizBox.classList.add("hidden");
+      document.getElementById("difficulty-level").classList.add("hidden");
       console.log("Quiz complete!");
       clearInterval(timerInterval); 
       completionBox.classList.remove("hidden");

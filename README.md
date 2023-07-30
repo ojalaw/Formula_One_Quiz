@@ -153,7 +153,7 @@ If users answer a question incorrectly, they recieve an 'incorrect answer' messa
 
 ![Image of incorrect answer button](README-images/incorrect-answer-button.png "Optional title")
 
-![Image of incorrect answer feedback](README-images/incorrect-answer-feedback.png "Optional title")
+![Image of incorrect answer feedback](README-images/incorrect-feedback.png "Optional title")
 
 **Quiz End Message**
 If have also added a message to be displayed to the user depending on how well they have done in the quiz. If they scored one of the top 3 scores for that difficulty, it is a congratulatory message, anything else is 'better luck next time'

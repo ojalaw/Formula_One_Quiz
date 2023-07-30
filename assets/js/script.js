@@ -313,7 +313,6 @@ const incorrectFeedback = [
   "Go have a little lie down.",
   "You missed this one, try the next one.",
 ];
-
 const playButton = document.querySelector("#play-button");
 const introBox = document.querySelector("#intro-box");
 const difficultyBox = document.querySelector("#difficulty");
@@ -323,7 +322,6 @@ const hardButton = document.querySelector("#hard");
 const quizBox = document.querySelector("#quiz");
 const questionText = document.querySelector("#question-text");
 const answersContainer = document.querySelector("#answers-container");
-const nextButton = document.querySelector("#next-question");
 const completionBox = document.querySelector("#completion-box");
 const completionText = document.querySelector('#completion-box p');
 const backButton = document.querySelector("#back-to-menu");
@@ -357,11 +355,11 @@ let timerExpired = false;
 let timeLeft = 15;
   const timerElement = document.getElementById("timer");
 
- function startTimer() {
-  clearInterval(timerInterval);
-  timerElement.textContent = timeLeft;
-
-  function updateTimer() {
+  function startTimer() {
+    clearInterval(timerInterval);
+    timerElement.textContent = timeLeft;
+  
+    function updateTimer() {
     timerElement.textContent = timeLeft;
     if (timeLeft >= 11) {
       timerElement.style.color = "green";
@@ -370,27 +368,30 @@ let timeLeft = 15;
     } else {
       timerElement.style.color = "red";
     }
-    if (timeLeft <= 0 && !timerExpired) {
-      timerExpired = true;
-      const buttons = answersContainer.getElementsByTagName("button");
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = true;
-        buttons[i].classList.add('incorrect');
+    if (timeLeft <= 0) {
+      if (!timerExpired) {
+        timerExpired = true;
+        const buttons = answersContainer.getElementsByTagName("button");
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].disabled = true;
+          buttons[i].classList.add('incorrect');
+        }
+        incorrectSound.play();
+        answerMessage.textContent = "Time's up! Incorrect answer!";
+        answerMessage.classList.remove('hidden');
+        setTimeout(() => {
+          handleAnswer(false, null);
+        }, 2000);
       }
-      incorrectSound.play();
-      answerMessage.textContent = "Time's up! Incorrect answer!";
-      answerMessage.classList.remove('hidden');
-      setTimeout(() => {
-        nextButton.click();
-      }, 1500);
+      clearInterval(timerInterval);
+      timeLeft = 0;
       return;
     }
     timeLeft--;
   }
-  updateTimer();
-
-  timerInterval = setInterval(updateTimer, 1000);
-}
+    updateTimer();
+    timerInterval = setInterval(updateTimer, 1000);
+  }
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -470,18 +471,17 @@ function startLights(level) {
 
                    startSound.play();
                   
-          setTimeout(() => {
-            document.getElementById("difficulty-level").classList.remove("hidden");
-            container.removeChild(message);
-            container.style.display = "none";
-            quizBox.classList.remove("hidden");
-            loadQuestion(questions[difficulty][0]);
-          }, 3000);
-        }, 1000);
-      }
-    }, i * 1000);
-  });
-}
+                   setTimeout(() => {
+                    container.removeChild(message);
+                    container.style.display = "none";
+                    quizBox.classList.remove("hidden");
+                    loadQuestion(questions[difficulty][0]);
+                  }, 3000);
+                }, 1000);
+              }
+            }, i * 1000);
+          });
+        }
 
 playButton.addEventListener("click", () => {
     introBox.classList.add("hidden");
@@ -500,16 +500,6 @@ questions[difficulty] = shuffleArray(questions[difficulty]);
   currentQuestionIndex = 0;
   score = 0;
   updateScoreDisplay();
-  const difficultyLevelElement = document.getElementById("difficulty-level");
-  let difficultyName;
-  if (selectedDifficulty === 'easy') {
-    difficultyName = 'Rookie';
-  } else if (selectedDifficulty === 'medium') {
-    difficultyName = 'Seasoned Driver';
-  } else if (selectedDifficulty === 'hard') {
-    difficultyName = 'Expert';
-  }
-  difficultyLevelElement.textContent = difficultyName;
   startLights(difficulty);
 }
 
@@ -530,11 +520,9 @@ function loadQuestion(question) {
   for (let i = 0; i < shuffledAnswers.length; i++) {
     let answer = shuffledAnswers[i];
     let answerButton = document.createElement("button");
-    answerButton.classList.add("answer-button");
     answerButton.textContent = answer.text;
     answerButton.addEventListener("click", (event) => {
       handleAnswer(answer.isCorrect, event.target);
-      nextButton.classList.remove("hidden");
     });
     answersContainer.appendChild(answerButton);
   }
@@ -544,7 +532,7 @@ function loadQuestion(question) {
   const progress = ((currentQuestionIndex + 1) / questions[difficulty].length) * 100;
   progressBarFull.style.width = `${progress}%`;
 
-  timeLeft = 15;
+     timeLeft = 15;
   timerElement.textContent = timeLeft;
 
   startTimer();
@@ -560,49 +548,44 @@ function handleAnswer(isCorrect, target) {
       buttons[i].classList.add(isCorrect ? 'correct' : 'incorrect');
     }
     let feedbackMessage = isCorrect 
-    ? correctFeedback[Math.floor(Math.random() * correctFeedback.length)] 
-    : incorrectFeedback[Math.floor(Math.random() * incorrectFeedback.length)];
-answerMessage.textContent = (isCorrect ? "Correct answer! " : "Incorrect answer! ") + feedbackMessage;
-  answerMessage.classList.remove('hidden');
-  nextButton.classList.remove("hidden");
-}
+      ? correctFeedback[Math.floor(Math.random() * correctFeedback.length)] 
+      : incorrectFeedback[Math.floor(Math.random() * incorrectFeedback.length)];
+    answerMessage.textContent = (isCorrect ? "Correct answer! " : "Incorrect answer! ") + feedbackMessage;
+    answerMessage.classList.remove('hidden');
+  }
+   clearInterval(timerInterval);
 console.log(isCorrect ? 'Correct!' : 'Incorrect!');
-if(isCorrect) {
-  correctSound.play();
-  incrementScore(difficulty); 
-  correctAnswers++;
-}else {
+  if (isCorrect) {
+    correctSound.play();
+    incrementScore(difficulty); 
+    correctAnswers++;
+  } else {
     incorrectSound.play();
-}
-}
-
-nextButton.addEventListener("click", () => {
+  }
+  
+  setTimeout(() => {
     currentQuestionIndex++;
-    
-    if(currentQuestionIndex < questions[difficulty].length) {
+
+    if (currentQuestionIndex < questions[difficulty].length) {
       loadQuestion(questions[difficulty][currentQuestionIndex]);
-      nextButton.classList.add("hidden");
-      answerMessage.classList.add("hidden")
+      answerMessage.classList.add("hidden");
     } else {
       quizBox.classList.add("hidden");
       document.getElementById("difficulty-level").classList.add("hidden");
       console.log("Quiz complete!");
       clearInterval(timerInterval); 
       completionBox.classList.remove("hidden");
-      if(correctAnswers >= 8) {
+      if (correctAnswers >= 8) {
         completionText.textContent = `Congratulations, you answered ${correctAnswers} questions correctly and scored ${score}! Excellent job!`;
-
         congratulationsSound.play();
-        
       } else {
-        completionText.textContent = `You only answered ${correctAnswers} questions correctly. Your score of ${score} was net enough for the top 3,  Better luck next time!`;
-
-betterLuckNextTimeSound.play();
-        
+        completionText.textContent = `You only answered ${correctAnswers} questions correctly. Your score of ${score} was net enough for the top 3, Better luck next time!`;
+        betterLuckNextTimeSound.play();
       }
       progressBar.classList.add("hidden")
     }
-  });
+  }, 3000);
+}
 
 backButton.addEventListener("click", () => {
   introBox.classList.remove("hidden");

@@ -234,7 +234,7 @@ PageSpeed Insights was used as a backup to Google Chrome Dev tools when lighthou
 
 ## Testing 
 
-
+Testing process can be found [here](https://github.com/ojalaw/Formula_One_Quiz_MP2/blob/main/TESTING.md)
 
 ## Deployment
 

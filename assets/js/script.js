@@ -494,8 +494,11 @@ mediumButton.addEventListener("click", () => startQuiz('medium'));
 hardButton.addEventListener("click", () => startQuiz('hard'));
 
 function startQuiz(selectedDifficulty) {
-  difficultyBox.classList.add("hidden");
   difficulty = selectedDifficulty;
+  const levelElement = document.getElementById('difficulty-level');
+  levelElement.textContent = `${difficulty} difficulty`; 
+  levelElement.classList.remove('hidden');
+  difficultyBox.classList.add("hidden");
 questions[difficulty] = shuffleArray(questions[difficulty]);
   currentQuestionIndex = 0;
   score = 0;
@@ -520,6 +523,7 @@ function loadQuestion(question) {
   for (let i = 0; i < shuffledAnswers.length; i++) {
     let answer = shuffledAnswers[i];
     let answerButton = document.createElement("button");
+    answerButton.classList.add("answer-button");
     answerButton.textContent = answer.text;
     answerButton.addEventListener("click", (event) => {
       handleAnswer(answer.isCorrect, event.target);

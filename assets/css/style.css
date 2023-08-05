@@ -214,7 +214,7 @@ button:hover {
 
 .quiz-box {
   justify-content: center;
-  margin: 60px 20px;
+  margin: 80px 20px;
   align-self: center;
   text-align: center;
   background-color: gray;
@@ -227,14 +227,19 @@ button:hover {
  #difficulty {
   width: fit-content;
   padding: 20px;
-  margin-top: 50px; 
+  margin-top: 80px; 
+}
+
+#difficulty-text {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 .difficulty-option {
  display: flex;
  flex-direction: column;
  align-items: center;
- text-align: center; 
+ text-align: center;
 }
 
 .difficulty-option img {
@@ -257,7 +262,7 @@ img {
 
 #difficulty-level {
   text-align: center;
-  margin: 40px auto;
+  margin: 20px auto;
   padding: 10px;
   background-color: gray;
   border-radius: 10px;
@@ -280,8 +285,14 @@ img {
   height: 60px;
   font-size: 16px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
-  
+
+#answer-message {
+  height: 40px;
+}
+
   /*---progress---*/ 
  #progressBar {
    background-color: black;
@@ -395,9 +406,9 @@ color: black;
   margin-top: 20px;
   font-size: 2rem;
   background-color: white;
+  display: inline-block;
   border-radius: 10px;
   padding: 5px;
-  
 }
 
 @media (max-width: 1200px) {
@@ -412,4 +423,9 @@ color: black;
     padding: 10px;
     width: calc(100% - 20px);
   }
+.answer-button {
+  width: 600px;
+    height: 120px; 
+    font-size: 32px; 
+}
 }

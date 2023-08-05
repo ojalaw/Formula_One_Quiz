@@ -102,7 +102,7 @@
     </div>
   </div>
 <div id="difficulty" class="quiz-box hidden">
-  <p>Difficulty Level</p>
+  <div id="difficulty-text"><p>Difficulty Level</p></div>
 <div id="difficulty-inner">
   <div class="difficulty-option">
     <img src="assets/images/easy.jpg" alt="Rookie Image">
@@ -118,10 +118,11 @@
   </div>
 </div>
 </div>
-<div>
-<h2 id="difficulty-level" class="hidden"></h2>
-</div>
     <div id="quiz" class="quiz-box hidden">
+      <h2 id="difficulty-level" class="hidden"></h2>
+      <div class="timer-section">
+        <div id="timer"></div>
+        </div>
       <div id="question-display">
         <div id="question-section">
           <p id="progressText" class="question-counter">
@@ -131,9 +132,6 @@
             <div id="progressBarFull"></div>
           </div>
         </div>
-        <div class="timer-section">
-          <div id="timer"></div>
-          </div>
         <div id="score-section">
           <p class="score-text">
             Score
@@ -144,8 +142,8 @@
         </div>
       </div>
       <p id="question-text"></p>
-      <p id="answer-message" class="hidden"></p>
       <div id="answers-container"></div>
+      <p id="answer-message" class="hidden"></p>
     </div>
     <div id="completion-box" class="quiz-box hidden">
       <p id="completion-text"></p>

@@ -115,19 +115,19 @@ body {
 }
 
   /*---page-style---*/ 
-#page-title {
-  text-align: center;
-  padding-bottom: 10px;
-  margin: 30px;
-  padding: 5px;
-}
-
-.page-title {
- background-color: gray;
- display: inline-block;
- border-radius: 5px;
- padding: 5px;
-}
+  #page-title {
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 30px;
+    padding: 5px;
+  }
+  
+  .page-title {
+   background-color: gray;
+   display: inline-block;
+   border-radius: 5px;
+   padding: 5px;
+  }
   
   /*--intro-box---*/
   
@@ -374,7 +374,7 @@ img {
 .leaderboard {
   background-color: gray;
   border-radius: 10px;
-  margin: auto;
+  margin: 50px 90px;
   width: 60%;
   padding: 20px; 
 text-align: center;
@@ -384,7 +384,7 @@ text-align: center;
   width: 80%;
   border-collapse: separate; 
   border-spacing: 10px; 
-  margin: auto;
+  margin: 50px 90px;
   text-align: center;
 }
 

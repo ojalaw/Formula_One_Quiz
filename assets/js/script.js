@@ -146,6 +146,7 @@ let questions = {
         { text: "The driver should slow down", isCorrect: false },
         { text: "The driver should speed up", isCorrect: false },
         { text: "The driver should come into the pits", isCorrect: true },
+        { text: "The driver should stop in his start box", isCorrect: false },
       ],
     },
     {
@@ -551,20 +552,25 @@ function handleAnswer(isCorrect, target) {
     if (buttons[i] === target) {
       buttons[i].classList.add(isCorrect ? 'correct' : 'incorrect');
     }
-    let feedbackMessage = isCorrect 
-      ? correctFeedback[Math.floor(Math.random() * correctFeedback.length)] 
-      : incorrectFeedback[Math.floor(Math.random() * incorrectFeedback.length)];
-    answerMessage.textContent = (isCorrect ? "Correct answer! " : "Incorrect answer! ") + feedbackMessage;
-    answerMessage.classList.remove('hidden');
+    if (!timerExpired) {
+      let feedbackMessage = isCorrect 
+        ? correctFeedback[Math.floor(Math.random() * correctFeedback.length)] 
+        : incorrectFeedback[Math.floor(Math.random() * incorrectFeedback.length)];
+      answerMessage.textContent = (isCorrect ? "Correct answer! " : "Incorrect answer! ") + feedbackMessage;
+      answerMessage.classList.remove('hidden');
+    }
   }
-   clearInterval(timerInterval);
-console.log(isCorrect ? 'Correct!' : 'Incorrect!');
+  clearInterval(timerInterval);
+  console.log(isCorrect ? 'Correct!' : 'Incorrect!');
   if (isCorrect) {
     correctSound.play();
     incrementScore(difficulty); 
     correctAnswers++;
   } else {
-    incorrectSound.play();
+    // Only play incorrect sound if timer hasn't expired
+    if (!timerExpired) {
+      incorrectSound.play();
+    }
   }
   
   setTimeout(() => {
@@ -583,7 +589,7 @@ console.log(isCorrect ? 'Correct!' : 'Incorrect!');
         completionText.textContent = `Congratulations, you answered ${correctAnswers} questions correctly and scored ${score}! Excellent job!`;
         congratulationsSound.play();
       } else {
-        completionText.textContent = `You only answered ${correctAnswers} questions correctly. Your score of ${score} was net enough for the top 3, Better luck next time!`;
+        completionText.textContent = `You only answered ${correctAnswers} questions correctly. Your score of ${score} was not enough for the top 3, Better luck next time!`;
         betterLuckNextTimeSound.play();
       }
       progressBar.classList.add("hidden")

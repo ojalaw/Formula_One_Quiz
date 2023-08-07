@@ -561,7 +561,6 @@ function handleAnswer(isCorrect, target) {
     }
   }
   clearInterval(timerInterval);
-  console.log(isCorrect ? 'Correct!' : 'Incorrect!');
   if (isCorrect) {
     correctSound.play();
     incrementScore(difficulty); 
@@ -582,7 +581,6 @@ function handleAnswer(isCorrect, target) {
     } else {
       quizBox.classList.add("hidden");
       document.getElementById("difficulty-level").classList.add("hidden");
-      console.log("Quiz complete!");
       clearInterval(timerInterval); 
       completionBox.classList.remove("hidden");
       if (correctAnswers >= 8) {

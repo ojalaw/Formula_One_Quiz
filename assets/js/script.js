@@ -329,7 +329,6 @@ const backButton = document.querySelector("#back-to-menu");
 const submitButton = document.querySelector("#submit-score");
 const nameInput = document.querySelector("#name-input");
 const leaderboardButton = document.querySelector("#leaderboard-button");
-const muteButton = document.getElementById("mute-button");
 const correctSound = new Audio('assets/audio/correct.mp3');
 const incorrectSound = new Audio('assets/audio/incorrect.mp3');
 const startSound = new Audio('assets/audio/start.mp3');
@@ -346,6 +345,7 @@ const allSounds = [
   beep
 ];
 
+const muteButton = document.getElementById("mute-button");
 muteButton.addEventListener("click", toggleMute);
 document.getElementById('play-button').addEventListener('click', function() {
   document.querySelector('.tyre-sphere-container').style.display = 'none';

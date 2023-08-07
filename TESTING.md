@@ -36,12 +36,6 @@ This site has been tested using the following testing procedures
 **Mobile**  
 
 
-
-
-## Manual Testing  
-
-During the manual testing, I tested the sites functionality, usability and responsiveness. 
-
 ## Automatic Testing  
 
 During automatic testing i initially tested the basic functionality of jest be making sure a simple test passed. For this example I used true === true.  
@@ -49,10 +43,26 @@ The function that i decided to test in my code using automatic testing was the i
 
 ![Autmatic testing screenshot](README-images/automatic-testing.png "Optional title")
 
+## Manual Testing  
+
+During the manual testing, I tested the sites functionality, usability and responsiveness. 
+
 
 #### Functionality
 
 **Quiz Logic**
+I made some changes to the quiz logic during the testing of my site.The initial aim was to get the quiz to a minimum viable product (MVP). Once i had achieved this, i made relevant changes to improve user experience. The general logic of the quiz has remained the same throughout. There a 10 questions in each difficulty and once they have been answered, the quiz has finished. However, while testing my site, I added a number of features to improve it. For example, I added a 15 second timer that counts down to zero, to add an extra layer of difficulty and reduces the risk of users cheating in the quiz. I randomised the questions and the order of the answers so that they are in a different order every time the quiz is run. I initially display a correct/incorrect answer message to users, on the advice of my tutor, I included an extra message with some humour involved to improve user experience.
+
+
+**Usability**  
+
+
+**Responsiveness**  
+
+
+
+
+## Bug Reporting
 
 - During the initial phase of implementing the quiz logic, I realised that multiple answers could be selected for each individual question. To correct this, i appropriately modified the ternary operator that i had already included so that only one answer could be selected at a time for each question. I also realised that i had not added a message at the end of the quiz to notify users that the quiz was finished, to correct this, I added a short congratulatory message letting users know the quiz was finished, accomponied by a button which takes users back to the main menu.  
 
@@ -69,18 +79,6 @@ The function that i decided to test in my code using automatic testing was the i
 - Automated testing issues; duplicating files.  
 
 - Having to change hover so that it is just border to stop clashes.
-
-
-
-**Usability**  
-
-
-**Responsiveness**  
-
-
-
-
-## Bug Reporting
 
 
 [Back to README.md](https://github.com/ojalaw/Formula_One_Quiz_MP2)

@@ -4,7 +4,9 @@ body {
     font-family: Titillium Web;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+  position: relative;
+  padding-bottom: 99px;
   }
  
   p {
@@ -415,6 +417,39 @@ color: black;
   padding: 5px;
 }
 
+/*---footer---*/
+
+footer {
+  position: absolute;
+  background-color: red;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  margin-top: 20px;
+  height: 99px;
+}
+
+footer > span {
+  color: white;
+}
+
+footer > a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 2em; 
+}
+
+footer > a:hover {
+  color: black;
+}
+
+footer > p {
+  color: white;
+  font-size: 1.2em; 
+  margin-top: 1em; 
+}
+
 @media (max-width: 1200px) {
   #difficulty-inner {
     flex-direction: column;
@@ -427,9 +462,4 @@ color: black;
     padding: 10px;
     width: calc(100% - 20px);
   }
-.answer-button {
-  width: 600px;
-    height: 120px; 
-    font-size: 32px; 
-}
 }

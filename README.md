@@ -95,6 +95,9 @@ Once the quiz is finished, users will be presented with a page that tells the us
 I have put alot of thought into the symbology of the site. For example, many of the design and animation aspects have been done to closely match what can be seen in Formula One today. As previously mentioned, the gogle font used is the same as in Formula One, the scoring system matches the way that racers are scored. The audio that features throughout the site is very similar to what would be heard during a race day. The starting light procedure proior to the quiz is what one would see prior to a race starting and the displayed score at the end mimics end of race celebrations.
 
 
+### Accessibility  
+
+
 ### Imagery
 
 TBD
@@ -105,7 +108,7 @@ TBD
 
 
 ### Future updates
-The are a number of updates i would like to implement in the future. One update that could be included is a light/dark version of the quiz. I would also like to add more Formula 1 related animations, audio and images on the site.In addition, a leaderboard that extends further than local storage and has a database attached to it.
+The are a number of updates i would like to implement in the future. One update that could be included is a light/dark version of the quiz. I would also like to add more Formula 1 related animations, audio and images on the site. In addition, a leaderboard that extends further than local storage and has a database attached to it.
 
 ## Features
 
@@ -172,10 +175,7 @@ I used 'beeping' audio to simulate startling light procedure. Feedback audio dep
 
 ### Future Implementations
 
- 
-
-### Accessibility  
-
+Disable site for users with small screen width, prompt them to rotate device to horizontal for better UX.
 
 ## Technologies Used
 

@@ -166,14 +166,18 @@ button:hover {
 /*---mute-button---*/
 
 #mute-button {
-  position: fixed;
-  top: 100px;
-  right: 100px;
-  z-index: 100;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin: 0px;
 }
 
 #mute-button:hover {
  background-color: red;
+}
+
+.mute-button-container {
+position: relative;
 }
 
 /*---tyre-animation---*/
@@ -511,7 +515,7 @@ footer > p {
   }
 }
 
-@media (min-width: 401px) and (max-width: 560px) {
+@media (max-width: 560px) {
   .lights-rectangle {
     padding: 10px;
     margin-top: 80px; 
@@ -532,3 +536,4 @@ footer > p {
     font-size: 0.9em; 
   }
 }
+

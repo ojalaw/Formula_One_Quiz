@@ -10,7 +10,7 @@ body {
   }
  
   p {
-   font-size: 2rem;
+   font-size: 1.5rem;
   }
 
  label {
@@ -283,7 +283,7 @@ img {
  }
 
  .answer-button, .generic-button {
-  width: 300px;
+  width: 250px;
   height: 60px;
   font-size: 16px;
   font-weight: bold;
@@ -293,6 +293,7 @@ img {
 
 #answer-message {
   height: 40px;
+  margin: 20px;
 }
 
   /*---progress---*/ 
@@ -450,6 +451,8 @@ footer > p {
   margin-top: 1em; 
 }
 
+/*---media-queries---*/
+
 @media (max-width: 1200px) {
   #difficulty-inner {
     flex-direction: column;
@@ -461,5 +464,71 @@ footer > p {
     margin: 20px;
     padding: 10px;
     width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 320px) {
+
+  p, .answer-button, .score-text, .question-counter {
+    font-size: 0.9rem;
+  }
+  #intro-box {
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  #difficulty-inner {
+    flex-direction: column;
+  }
+
+  #difficulty-level {
+    padding: 5px;
+    margin: 10px auto;
+  }
+
+  #difficulty {
+    padding: 0;
+  }
+
+  .lights-rectangle {
+    padding: 10px; 
+    margin-top: 100px; 
+    width: 90%; 
+    flex-direction: row; 
+  }
+
+  .column {
+    width: 30px; 
+  }
+
+  .lights {
+    width: 20px;
+    height: 20px; 
+  }
+
+  .message {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 560px) {
+  .lights-rectangle {
+    padding: 10px;
+    margin-top: 80px; 
+    width: 100%; 
+    flex-direction: row;
+  }
+
+  .column {
+    width: 35px; 
+  }
+
+  .lights {
+    width: 25px; 
+    height: 25px; 
+  }
+
+  .message {
+    font-size: 0.9em; 
   }
 }

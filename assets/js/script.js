@@ -345,10 +345,9 @@ const allSounds = [
   beep
 ];
 
-const muteButton = document.getElementById("mute-button");
-muteButton.addEventListener("click", toggleMute);
-document.getElementById('play-button').addEventListener('click', function() {
-  document.querySelector('.tyre-sphere-container').style.display = 'none';
+$("#mute-button").click(toggleMute);
+$("#play-button").click(function() {
+  $(".tyre-sphere-container").hide();
 });
 
 let timerInterval;

@@ -166,9 +166,6 @@ button:hover {
 /*---mute-button---*/
 
 #mute-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
   margin: 0px;
   width: 40px;
   height: 40px;
@@ -180,7 +177,9 @@ button:hover {
 }
 
 .mute-button-container {
-position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
 }
 
 /*---tyre-animation---*/

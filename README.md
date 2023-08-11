@@ -1,5 +1,11 @@
 # FO-Quiz-MP2
-Formula One Quiz is a quiz for users all levels of knowledge relating to Formula One. The quiz is all things Formula one when it comes to quiz content, style and symbology. The quiz is borken down into 3 sections for users that have limited knowledge (Rookie), those who have a general understanding of Formula One (Seasoned Driver) and Formula One Experts (Expert). It is an interactive quiz with users having a certain amount of time to choose an answer, a Formula One style scoring system has also been implemeneted. Throughout the site there a subtle features included to give the user an authentic Formula One quiz experience.
+Formula One Quiz is a quiz for users all levels of knowledge relating to Formula One. The quiz is all things Formula one when it comes to quiz content, style and symbology. The quiz is broken down into 3 sections for users that have limited knowledge (Rookie), those who have a general understanding of Formula One (Seasoned Driver) and Formula One Experts (Expert). It is an interactive quiz with users having a certain amount of time to choose an answer, a Formula One style scoring system has also been implemented. Throughout the site there a subtle features included to give the user an authentic Formula One quiz experience.  
+
+This is Milestone Project 2 for a Level 5 Diploma in Web Application Development. This website features two html pages and is built using technologies that I have learnt since staring the course including HTML, CSS and Javascript.  
+
+![alt text](README-images/mockup.png "Optional title")  
+
+Link to live site: https://ojalaw.github.io/Formula_One_Quiz_MP2/
 
 ## CONTENTS
 
@@ -100,7 +106,7 @@ I have put alot of thought into the symbology of the site. For example, many of 
 
 ### Imagery
 
-TBD
+I used minimal imagery for my site with the intention to keep it as simplistic as possible. Alos, to really optimise the site with imagery, i would need to use Official F1 imagery which would breach copyright. Images used can be found in the credits.
 
 ### Wireframes
 
@@ -218,7 +224,7 @@ Visual Studio Code was use to create files pages and where i produced the code f
 Compressor.io was used to reduce the size of images, this was recommended during validation.
 
 [Canva](https://www.canva.com/en_gb/)  
-Canva design tool was used to increase the exposure on my hero image to ensure it was consistent with the theme of the site. 
+Canva design tool was used to edit the image of the tyre for the spinning tyre animation. 
 
 [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)    
 Google Chrome Dev Tools was used during the testing phase to test the responsiveness of the site and to check for any bugs.
@@ -291,6 +297,23 @@ Code Institute training material
 
 
 ###  Media
+
+**Images**  
+All images used in the site were from shutterstock and can be found below.  
+Shutterstock - photo of young racer on a cardboard racing car - 552230137 - Babich Alexander  
+Shuterstock - Go karting - 400812964 - makalex69  
+Shutterstock - F1 Driver celebrating - 2226240731 - Supamotionstock.com  
+Shutterstock - Tyre - 2286386571 - Cesar Mendez
+
+**Audio**  
+All audio used in the site were from epidemic sound and can be found below.  
+
+beep.mp3 - beep single 11 - Epidemicsound.com  
+betterlucknexttime.mp3 - Trumpet Sad - Epidemicsound.com  
+congratulations.mp3 - Human Crowd Studio 7 - Epidemicsound.com  
+correct.mp3 - Impact Wrench 20 - Epidemicsound.com  
+incorrect.mp3 - Game Show Buzzer 1 - Epidemicsound.com  
+start.mp3 - Pontiac Grand Prix 4 - Epidemicsound.com  
 
 
   

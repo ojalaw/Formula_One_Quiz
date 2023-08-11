@@ -418,6 +418,9 @@ color: black;
 /*---footer---*/
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   background-color: red;
   text-align: center;
@@ -435,17 +438,11 @@ footer > a {
   color: white;
   text-decoration: none;
   padding: 0 15px;
-  font-size: 2em; 
+  font-size: 2rem; 
 }
 
 footer > a:hover {
   color: black;
-}
-
-footer > p {
-  color: white;
-  font-size: 1.2em; 
-  margin-top: 1em; 
 }
 
 /*---media-queries---*/

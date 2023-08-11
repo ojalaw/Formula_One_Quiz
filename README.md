@@ -102,6 +102,7 @@ I have put alot of thought into the symbology of the site. For example, many of 
 
 
 ### Accessibility  
+Site is accessible.
 
 
 ### Imagery

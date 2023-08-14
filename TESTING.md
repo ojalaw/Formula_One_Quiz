@@ -29,6 +29,11 @@ The validator showed no such warning for the leaderboard.html page.
 
 ![Image of css validator testing](README-images/w3-css-validator.png "Optional title")  
 
+There were no warnings for the css file.  
+
+![Image of javascript jshint testing](README-images/jshint-validator.png "Optional title")  
+
+There was one warning went the script.js file was run through jshint validator. However, the warning does not impact the quiz logic and was tested extensively to ensure it does not have an impact on the site.  
 
 
 ## Lighthouse Testing  
@@ -90,11 +95,19 @@ I made some changes to the quiz logic during the testing of my site.The initial 
 
 
 **Usability**  
+Some users found mute button could have been more easily accessible.  
+
+TBC...
 
 
 **Responsiveness**  
+I tried to use as less break points as possible.  
+- 320px  
+- 560px  
+- 768px  
+- 1200px  
 
-
+TBC...
 
 
 ## Bug Reporting

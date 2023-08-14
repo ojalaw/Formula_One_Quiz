@@ -343,7 +343,7 @@ img {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   height: 100vh;
+   height: auto;
    margin: auto;
  }
  
@@ -353,7 +353,6 @@ img {
    justify-content: center;
    align-items: center;
    padding: 20px;
-   margin-top: 250px;
    border-radius: 25px;
  }
  
@@ -446,8 +445,22 @@ footer > a:hover {
 }
 
 /*---media-queries---*/
-
 @media (max-width: 1200px) {
+  .difficulty-option img {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+  }
+
+  .difficulty-option .generic-button {
+    font-size: 0.8rem; /* Adjust as needed */
+    padding: 10px; /* Adjust as needed */
+    width: 180px;
+  }
+
+  /* Add any other adjustments here */
+}
+
+@media (max-width: 800px) {
   #difficulty-inner {
     flex-direction: column;
   }
@@ -508,7 +521,6 @@ footer > a:hover {
 @media (max-width: 560px) {
   .lights-rectangle {
     padding: 10px;
-    margin-top: 80px; 
     width: 100%; 
     flex-direction: row;
   }

@@ -51,7 +51,7 @@ Search Engine Optimization
 **Leaderboard**  
 
  - Leaderboard desktop lighthouse score [here](README-images/leaderboard-desktop-lighthouse.png "Optional title")  
- - Leaderboard mobile lighthouse score [here](README-images/leqaderboard-mobile-lighthouse.png "Optional title") 
+ - Leaderboard mobile lighthouse score [here](README-images/leaderboard-mobile-lighthouse.png "Optional title") 
 
 ## Browser Compatibility 
   

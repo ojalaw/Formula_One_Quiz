@@ -17,24 +17,59 @@ This site has been tested using the following testing procedures
 
 ## Code Validation  
 
+The site was run through both W3C and W3C CSS validators.  
+
+![Image of validator index testing](README-images/index-w3-validator.png "Optional title")  
+
+The validator showed one warning for the index.html, the reason for this was that the valdidation checker would not know that I am dynamically changing the h2 element based on what difficulty level the user has selected.  
+
+![Image of validator leaderboard testing](README-images/leaderboard-w3-validator.png "Optional title")  
+
+The validator showed no such warning for the leaderboard.html page.  
+
+![Image of css validator testing](README-images/w3-css-validator.png "Optional title")  
+
 
 
 ## Lighthouse Testing  
 
+I used lighthouse testing via Google Chrome Developer Tools and PageSpeed Insights.
+
+The site is tested against the following criteria;
+
+Performance
+Accessibility
+Best Practices
+Search Engine Optimization
 
 
 **Index**  
 
+- Index desktop lighthouse score [here](README-images/index-desktop-lighthouse.png "Optional title")  
+- Index mobile lighthouse score [here](README-images/index-mobile-lighthouse.png "Optional title")  
 
+**Leaderboard**  
+
+ - Leaderboard desktop lighthouse score [here](README-images/leaderboard-desktop-lighthouse.png "Optional title")  
+ - Leaderboard mobile lighthouse score [here](README-images/leqaderboard-mobile-lighthouse.png "Optional title") 
 
 ## Browser Compatibility 
   
 **Desktop**  
-  
- 
+| Browser            | Version                                               | Bugs  |
+| -------------      |:-------------:                                        | -----:|
+| Google Chrome      | Version 112.0.5615.138 (Official Build) (64-bit)      | None  |
+| Microsoft Edge     | Version 112.0.1722.58 (Official build) (64-bit)       | None  |
+| Firefox            | 112.0.1 (64-bit)                                      | None  |  
   
 **Mobile**  
 
+
+| Device                   | Operating system | Bugs  |
+| -------------            |:-------------:   | -----:|
+| iPhone 14                | iOS 16.3.1       | None  |
+| iPhone 14 pro            | iOS 16.0         | None  |
+| Samsung galaxy S22 Ultra | Android 13       | None  |
 
 ## Automatic Testing  
 

@@ -418,8 +418,8 @@ function toggleMute() {
 } 
 
 leaderboardButton.addEventListener("click", () => {
-    window.location.href = "leaderboard.html";
-  });
+  window.location.href = "leaderboard.html";
+});
 
 // Bootstrap modal
 document.querySelector('#rules-button').addEventListener('click', function() {

@@ -101,13 +101,13 @@ TBC...
 
 
 **Responsiveness**  
-I tried to use as less break points as possible.  
+I used the following break poitns for responsivensss.
 - 320px  
 - 560px  
 - 768px  
 - 1200px  
 
-TBC...
+The use of these breakpoints allowed the site to be mobile friendly and could be used on a range of different screen sizes.  
 
 
 ## Bug Reporting

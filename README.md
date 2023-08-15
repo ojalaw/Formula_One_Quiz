@@ -102,8 +102,7 @@ I have put alot of thought into the symbology of the site. For example, many of 
 
 
 ### Accessibility  
-Site is accessible.
-
+The site has scored highly in terms of accessibility, I have included alt text descriptions for all images to provide context and information to visually impaired users.  
 
 ### Imagery
 

@@ -1,13 +1,13 @@
 body {
-    background-color: black;
-    color: white;
-    font-family: Titillium Web;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  position: relative;
-  padding-bottom: 99px;
-  }
+  background-color: black;
+  color: white;
+  font-family: Titillium Web;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+position: relative;
+padding-bottom: 99px;
+}
  
   p {
    font-size: 1.5rem;
@@ -447,26 +447,21 @@ footer > a:hover {
 /*---media-queries---*/
 @media (max-width: 1200px) {
   .difficulty-option img {
-    width: 200px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
+    width: 200px; 
+    height: 200px; 
   }
 
   .difficulty-option .generic-button {
-    font-size: 0.8rem; /* Adjust as needed */
-    padding: 10px; /* Adjust as needed */
+    font-size: 0.8rem;
+    padding: 10px; 
     width: 180px;
-  }
-
-  /* Add any other adjustments here */
-}
-
-@media (max-width: 800px) {
-  #difficulty-inner {
-    flex-direction: column;
   }
 }
 
 @media (max-width: 768px) {
+  #difficulty-inner {
+    flex-direction: column;
+  }
   .quiz-box {
     margin: 20px;
     padding: 10px;

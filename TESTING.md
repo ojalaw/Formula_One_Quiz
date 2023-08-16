@@ -91,13 +91,31 @@ During the manual testing, I tested the sites functionality, usability and respo
 #### Functionality
 
 **Quiz Logic**
-I made some changes to the quiz logic during the testing of my site.The initial aim was to get the quiz to a minimum viable product (MVP). Once i had achieved this, i made relevant changes to improve user experience. The general logic of the quiz has remained the same throughout. There a 10 questions in each difficulty and once they have been answered, the quiz has finished. However, while testing my site, I added a number of features to improve it. For example, I added a 15 second timer that counts down to zero, to add an extra layer of difficulty and reduces the risk of users cheating in the quiz. I randomised the questions and the order of the answers so that they are in a different order every time the quiz is run. I initially display a correct/incorrect answer message to users, on the advice of my tutor, I included an extra message with some humour involved to improve user experience.
+I made some changes to the quiz logic during the testing of my site.The initial aim was to get the quiz to a minimum viable product (MVP). Once i had achieved this, i made relevant changes to improve user experience. The general logic of the quiz has remained the same throughout. There a 10 questions in each difficulty and once they have been answered, the quiz has finished. However, while testing my site, I added a number of features to improve it. For example, I added a 15 second timer that counts down to zero, to add an extra layer of difficulty and reduces the risk of users cheating in the quiz. I randomised the questions and the order of the answers so that they are in a different order every time the quiz is run. I initially displayed a correct/incorrect answer message to users, on the advice of my tutor, I included an extra message with some humour involved to improve user experience.
+
+Index.html
+- All buttons worked as expected.  
+- Spinning wheel animation worked as expected.  
+- Starting light animation worked as expected.  
+- Difficulty level buttons worked as expected and users were able to navigate easily.  
+- Timer counted down as expected and continued to next question if the timer ran down to 0.  
+- Question progress bar worked as expected.  
+- Users recieved feedback depending on whether they were correct/incorrect with their answers.  
+- The answer button turns green for correct and red for incorrect.  
+- Questions and answer buttons are loaded in correctly and in a different order every time the quiz is run.  
+- A completion box appears after the quiz as expected.  
+- Users can input their name at the end of the quiz, as expected.  
+- Users must fill in a name to continue.  
+- The leaderboard loads when the relevant button is clicked at the end of the quiz.  
+
+Leadeboard
+- Leadeboard scored load correctly as expected.
+
 
 
 **Usability**  
-Some users found mute button could have been more easily accessible.  
-
-TBC...
+- Some users found mute button could have been more easily accessible.  
+- Some users felt more images could have been used.
 
 
 **Responsiveness**  
@@ -122,7 +140,7 @@ The use of these breakpoints allowed the site to be mobile friendly and could be
 
 - Another issue with the 'next question' button, even if correct answer was selected, timer still ran down and registered incorrect answer. This contributed to my decision in removing the 'next question' button altogether.  
 
-- random code/text appearing because not corectly implemented.  
+- Random code/text appearing because not corectly implemented.  
 
 - Automated testing issues; duplicating files.  
 

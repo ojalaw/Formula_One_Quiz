@@ -41,6 +41,7 @@
         </div>
     </nav>
     </header>
+    <!--Starting light animation-->
     <div id="container" class="hidden">
       <div class="lights-rectangle">
         <div class="column">
@@ -76,17 +77,20 @@
       </div>
     </div>
     <div id="page-title"><h1 class="page-title">Formula One Quiz</h1></div>
+    <!--Spinning tyre animation-->
     <div class="tyre-sphere-container">
     <div class="tyre-sphere">
       <img src="assets/images/tyre.png" alt="Spinning tyre">
     </div>
   </div>
+  <!--Quiz landing page-->
     <div id ="intro-box">
       <p>Think you have what it takes?</p>
     <button id="play-button" class = "generic-button">Play</button>
     <button id="rules-button" class = "generic-button">Rules</button>
     <button onclick="location.href='leaderboard.html'" id="leaderboard-button" class = "generic-button">Leaderboard</button>
   </div>
+  <!--Modal-->
 <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -110,6 +114,7 @@
       </div>
     </div>
   </div>
+  <!--Difficulty level select-->
 <div id="difficulty" class="quiz-box hidden">
   <div id="difficulty-text"><p>Difficulty Level</p></div>
 <div id="difficulty-inner">
@@ -127,6 +132,7 @@
   </div>
 </div>
 </div>
+<!--Quiz box-->
     <div id="quiz" class="quiz-box hidden">
       <h2 id="difficulty-level" class="hidden"></h2>
       <div class="timer-section">
@@ -154,6 +160,7 @@
       <div id="answers-container"></div>
       <p id="answer-message" class="hidden"></p>
     </div>
+    <!--Quiz completion box-->
     <div id="completion-box" class="quiz-box hidden">
       <p id="completion-text"></p>
       <label for="name-input">Enter your name:</label>

@@ -1,4 +1,4 @@
-/* jshint esversion: 6 */
+// jshint esversion: 6
 let questions = {
   easy: [
     {
@@ -334,7 +334,6 @@ const correctSound = new Audio('assets/audio/correct.mp3');
 const incorrectSound = new Audio('assets/audio/incorrect.mp3');
 const startSound = new Audio('assets/audio/start.mp3');
 const congratulationsSound = new Audio('assets/audio/congratulations.mp3');
-const betterLuckNextTimeSound = new Audio('assets/audio/betterlucknexttime.mp3');
 const beep = new Audio('assets/audio/beep.mp3');
 
 const allSounds = [
@@ -342,10 +341,10 @@ const allSounds = [
   incorrectSound,
   startSound,
   congratulationsSound,
-  betterLuckNextTimeSound,
   beep
 ];
 
+// jQuery used to demonstrate usage, minimal usage throughout project.
 $("#mute-button").click(toggleMute);
 $("#play-button").click(function() {
   $(".tyre-sphere-container").hide();
@@ -564,7 +563,6 @@ function handleAnswer(isCorrect, target) {
     incrementScore(difficulty); 
     correctAnswers++;
   } else {
-    // Only play incorrect sound if timer hasn't expired
     if (!timerExpired) {
       incorrectSound.play();
     }
@@ -586,7 +584,6 @@ function handleAnswer(isCorrect, target) {
         congratulationsSound.play();
       } else {
         completionText.textContent = `You only answered ${correctAnswers} questions correctly. Your score of ${score} was not enough for the top 3, Better luck next time!`;
-        betterLuckNextTimeSound.play();
       }
       progressBar.classList.add("hidden");
     }

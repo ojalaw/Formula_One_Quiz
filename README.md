@@ -165,7 +165,7 @@ If users answer a question incorrectly, they recieve an 'incorrect answer' messa
 ![Image of incorrect answer feedback](README-images/incorrect-feedback.png "Optional title")
 
 **Quiz End Message**  
-If have also added a message to be displayed to the user depending on how well they have done in the quiz. If they scored one of the top 3 scores for that difficulty, it is a congratulatory message, anything else is 'better luck next time'
+If have also added a message to be displayed to the user depending on how well they have done in the quiz. If they scored one of the top 3 scores for that difficulty, it is a congratulatory message, anything else is 'better luck next time'.
 
 ![Image of quiz end message](README-images/quiz-end-message.png "Optional title")
 
@@ -197,10 +197,10 @@ Scripting language used to make aspects of the site interactive.
 ### Frameworks, Libraries & Programs Used
 
 [Bootstrap 5.3.0](https://getbootstrap.com/)  
-Bootstrap was used to assist with the responsiveness and styling of the website.
+Bootstrap was used to assist with the modal used in the website.
 
 [jQuery](https://jquery.com/)  
-jQuery came with Bootstrap to make the navbar responsive.
+jQuery came with Bootstrap to make the navbar responsive and was also used in javascript to demonstrate it could be used.
 
 [CDN jsdelivr](https://www.jsdelivr.com/)  
 CDN jsdeliver was used to serve static assets bootstrap and jquery to improve performance and reliability.
@@ -229,11 +229,11 @@ Canva design tool was used to edit the image of the tyre for the spinning tyre a
 [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)    
 Google Chrome Dev Tools was used during the testing phase to test the responsiveness of the site and to check for any bugs.
 
-[Shutterstock](https://www.shutterstock.com/), [AdobeStock](https://stock.adobe.com/uk/) and [Pixabay](https://pixabay.com/)  
-
+[Shutterstock](https://www.shutterstock.com/)  
+Shutterstock was used for the images present throughout the site.  
 
 [W3schools](https://www.w3schools.com/)    
-W3schools was used to source javascript for my site and for certain CSS aspects (mentioned below).
+W3schools was used to guide me on use of certain javascript principles.
 
 [PageSpeed Insights](https://pagespeed.web.dev/)   
 PageSpeed Insights was used as a backup to Google Chrome Dev tools when lighthouse testing my site.  
@@ -283,14 +283,6 @@ Forking this repository will allow changes to be made without affecting the orig
 Bootstrap v5.3.0
 
 Code Institute training material
-
-**Javascript**  
-
-
-
-**CSS**  
-
-
 
 ### Content
 

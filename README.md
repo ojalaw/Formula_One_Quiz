@@ -110,11 +110,14 @@ I used minimal imagery for my site with the intention to keep it as simplistic a
 
 ### Wireframes
 
-[41Q Wireframe](README-images/41Q-wireframe-mk2.pdf "Link to 41Q wireframe")
+[41Q Wireframe](README-images/41Q-wireframe-mk2.pdf "Link to 41Q wireframe")  
+There have been some changes since the wireframe was created. I initially intended on including a podium instead of the leaderboard page. However, as the project progressed, I thought it made more sense to have a local leaderboard. The general layout has stayed as i originally planned though.  
 
 
 ### Future updates
-The are a number of updates i would like to implement in the future. One update that could be included is a light/dark version of the quiz. I would also like to add more Formula 1 related animations, audio and images on the site. In addition, a leaderboard that extends further than local storage and has a database attached to it.
+As the 41Q website continues to evolve, I will continue to refine and improve the design based on feedback from our users and our own observations. I am committed to creating a website that is not only visually appealing but also easy to use and navigate, and I look forward to continuing to develop and improve our design over time.  
+
+Overall, the design of the 41Q website is clean, modern, and easy to use. I believe that our color scheme, typography, layout, and other visual elements et a high standard for UX, I look forward to continuing to refine and improve the design in the future.
 
 ## Features
 
@@ -146,7 +149,6 @@ I included a timer that counts down from 15 with the color changing when the tim
 ![Image of timer](README-images/timer.png "Optional title")
 
 **Score**  
-The score counter is as previouslt mentioned, correct answers will be awarded with 1 point on Rookie difficaulty, 5 points on seasoned driver difficulty and 10 points on expert difficulty.
 
 ![Image of score system](README-images/score-system.png "Optional title")
 
@@ -181,7 +183,11 @@ I used 'beeping' audio to simulate startling light procedure. Feedback audio dep
 
 ### Future Implementations
 
-Disable site for users with small screen width, prompt them to rotate device to horizontal for better UX.
+- Disable site for users with small screen width, prompt them to rotate device to horizontal for better UX.  
+- Dark/Light theme will be implemented at a later date.
+- Leaderboard positions will be colour coded with gold for first, silver for second and bronze for third.  
+- Leaderboard could be stored on a server and not just in local storage.  
+
 
 ## Technologies Used
 
@@ -192,7 +198,7 @@ Used for creation of markup for the website content.
 **CSS**  
 Cascading style sheets used to style the individual pages.  
 **Javascript**  
-Scripting language used to make aspects of the site interactive.
+Scripting language used to make aspects of the site interactive predominantly through DOM manipulation.
 
 ### Frameworks, Libraries & Programs Used
 
@@ -301,7 +307,6 @@ Shutterstock - Tyre - 2286386571 - Cesar Mendez
 All audio used in the site were from epidemic sound and can be found below.  
 
 beep.mp3 - beep single 11 - Epidemicsound.com  
-betterlucknexttime.mp3 - Trumpet Sad - Epidemicsound.com  
 congratulations.mp3 - Human Crowd Studio 7 - Epidemicsound.com  
 correct.mp3 - Impact Wrench 20 - Epidemicsound.com  
 incorrect.mp3 - Game Show Buzzer 1 - Epidemicsound.com  

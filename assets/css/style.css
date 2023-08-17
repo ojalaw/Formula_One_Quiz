@@ -1,7 +1,7 @@
 body {
   background-color: black;
   color: white;
-  font-family: Titillium Web;
+  font-family: 'Titillium Web', sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

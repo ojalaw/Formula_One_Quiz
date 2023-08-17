@@ -10,6 +10,8 @@ This site has been tested using the following testing procedures
 
 * [Browser Compatibility](#Browser-Compatibility)
 
+* [Automated Testing](#Automated-Testing)
+
 * [Manual Testing](#Manual-Testing)
 
 * [Bug Reporting](#Bug-Reporting)
@@ -21,7 +23,7 @@ The site was run through both W3C and W3C CSS validators.
 
 ![Image of validator index testing](README-images/index-w3-validator.png "Optional title")  
 
-The validator showed one warning for the index.html, the reason for this was that the valdidation checker would not know that I am dynamically changing the h2 element based on what difficulty level the user has selected.  
+The validator showed one warning for the index.html, the reason for this was that the validation checker would not know that I am dynamically changing the h2 element based on what difficulty level the user has selected.  
 
 ![Image of validator leaderboard testing](README-images/leaderboard-w3-validator.png "Optional title")  
 
@@ -79,9 +81,9 @@ Search Engine Optimization
 ## Automatic Testing  
 
 During automatic testing i initially tested the basic functionality of jest be making sure a simple test passed. For this example I used true === true.  
-The function that i decided to test in my code using automatic testing was the incrementScore function. By doing this, i was testing that the score was correctly incrementing based on the difficulty level of quiz that was selected. For example, a correct answer on a Rookie question scored 1 point, a correct answer on a seasoned driver question scored 5 points and a question on expert difficulty scored 10 points. Inluding the jest test, all 4 tests passed.  
+The function that i decided to test in my code using automatic testing was the incrementScore function. By doing this, i was testing that the score was correctly incrementing based on the difficulty level of quiz that was selected. For example, a correct answer on a Rookie question scored 1 point, a correct answer on a seasoned driver question scored 5 points and a question on expert difficulty scored 10 points. Including the jest test, all 4 tests passed.  
 
-![Autmatic testing screenshot](README-images/automatic-testing.png "Optional title")
+![Automatic testing screenshot](README-images/automatic-testing.png "Optional title")
 
 ## Manual Testing  
 
@@ -91,7 +93,7 @@ During the manual testing, I tested the sites functionality, usability and respo
 #### Functionality
 
 **Quiz Logic**
-I made some changes to the quiz logic during the testing of my site.The initial aim was to get the quiz to a minimum viable product (MVP). Once i had achieved this, i made relevant changes to improve user experience. The general logic of the quiz has remained the same throughout. There a 10 questions in each difficulty and once they have been answered, the quiz has finished. However, while testing my site, I added a number of features to improve it. For example, I added a 15 second timer that counts down to zero, to add an extra layer of difficulty and reduces the risk of users cheating in the quiz. I randomised the questions and the order of the answers so that they are in a different order every time the quiz is run. I initially displayed a correct/incorrect answer message to users, on the advice of my tutor, I included an extra message with some humour involved to improve user experience.
+I made some changes to the quiz logic during the testing of my site. The initial aim was to get the quiz to a minimum viable product (MVP). Once i had achieved this, i made relevant changes to improve user experience. The general logic of the quiz has remained the same throughout. There a 10 questions in each difficulty and once they have been answered, the quiz has finished. However, while testing my site, I added a number of features to improve it. For example, I added a 15 second timer that counts down to zero, to add an extra layer of difficulty and reduces the risk of users cheating in the quiz. I randomised the questions and the order of the answers so that they are in a different order every time the quiz is run. I initially displayed a correct/incorrect answer message to users, on the advice of my tutor, I included an extra message with some humour involved to improve user experience.
 
 Index.html
 - All buttons worked as expected.  
@@ -100,7 +102,7 @@ Index.html
 - Difficulty level buttons worked as expected and users were able to navigate easily.  
 - Timer counted down as expected and continued to next question if the timer ran down to 0.  
 - Question progress bar worked as expected.  
-- Users recieved feedback depending on whether they were correct/incorrect with their answers.  
+- Users received feedback depending on whether they were correct/incorrect with their answers.  
 - The answer button turns green for correct and red for incorrect.  
 - Questions and answer buttons are loaded in correctly and in a different order every time the quiz is run.  
 - A completion box appears after the quiz as expected.  
@@ -108,8 +110,11 @@ Index.html
 - Users must fill in a name to continue.  
 - The leaderboard loads when the relevant button is clicked at the end of the quiz.  
 
-Leadeboard
-- Leadeboard scored load correctly as expected.
+Leaderboard
+- Leaderboard scored load correctly as expected.
+- The users rank is displayed as expected.  
+- The users score is displayed as expected.  
+
 
 
 
@@ -119,7 +124,7 @@ Leadeboard
 
 
 **Responsiveness**  
-I used the following break poitns for responsivensss.
+I used the following break points for responsiveness.
 - 320px  
 - 560px  
 - 768px  
@@ -130,17 +135,17 @@ The use of these breakpoints allowed the site to be mobile friendly and could be
 
 ## Bug Reporting
 
-- During the initial phase of implementing the quiz logic, I realised that multiple answers could be selected for each individual question. To correct this, i appropriately modified the ternary operator that i had already included so that only one answer could be selected at a time for each question. I also realised that i had not added a message at the end of the quiz to notify users that the quiz was finished, to correct this, I added a short congratulatory message letting users know the quiz was finished, accomponied by a button which takes users back to the main menu.  
+- During the initial phase of implementing the quiz logic, I realised that multiple answers could be selected for each individual question. To correct this, i appropriately modified the ternary operator that i had already included so that only one answer could be selected at a time for each question. I also realised that i had not added a message at the end of the quiz to notify users that the quiz was finished, to correct this, I added a short congratulatory message letting users know the quiz was finished, accompanied by a button which takes users back to the main menu.  
 
-- correct answer printing 4 times in console log because i had incorrectly placed it isnide a for loop that i used to generate buttons for the answers.  
+- correct answer printing 4 times in console log because i had incorrectly placed it inside a for loop that i used to generate buttons for the answers.  
 
 - Timer counting down below zero.  
 
-- The 'next question' button that was initally implemented still appeared after all questions loaded, to correct this, i removed the button and adapted the code to resume automatically once an answer was selected after a short delay.  
+- The 'next question' button that was initially implemented still appeared after all questions loaded, to correct this, i removed the button and adapted the code to resume automatically once an answer was selected after a short delay.  
 
 - Another issue with the 'next question' button, even if correct answer was selected, timer still ran down and registered incorrect answer. This contributed to my decision in removing the 'next question' button altogether.  
 
-- Random code/text appearing because not corectly implemented.  
+- Random code/text appearing because not correctly implemented.  
 
 - Automated testing issues; duplicating files.  
 

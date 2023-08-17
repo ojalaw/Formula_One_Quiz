@@ -51,22 +51,22 @@ User new to the Formula one environment and looking to build knowledge and test 
 
 
 **User Story 2:** 
-User who has been exposed to Formula One for last 12 months, I want to test my knowledge but i also want to chalenge myself by playing a quiz that I will find challenging.
+User who has been exposed to Formula One for last 12 months, I want to test my knowledge but i also want to challenge myself by playing a quiz that I will find challenging.
 
 
 **User Story 3:** 
-Formula One super fan that has played multiple different Formula One quizes in the past. I want to play a quiz that not only tests and challeneges my knowledge of the sport but also has Formula One animations throughout the site.
+Formula One super fan that has played multiple different Formula One quizzes in the past. I want to play a quiz that not only tests and challenges my knowledge of the sport but also has Formula One animations throughout the site.
 
 
 **User Story 4:** 
-General knowledge quiz enthusiast. I want to play as many quizes as possible, I have a good baseline knowledge of Formula One and i would like to play the quiz on multiple different levels of experience.
+General knowledge quiz enthusiast. I want to play as many quizzes as possible, I have a good baseline knowledge of Formula One and i would like to play the quiz on multiple different levels of experience.
 
 
 ## Design  
 
 ### Colour Scheme
 
-Initial color scheme is general Dark theme with Black and Grey used for background colors white predominatly used for text and Red used as an accent colour. I have used this to give the site a modern contempary feel, the colour scheme is also similar to that of Formula One and has been used for symbolic purposes.
+Initial color scheme is general Dark theme with Black and Grey used for background colors white predominantly used for text and Red used as an accent colour. I have used this to give the site a modern contemporary feel, the colour scheme is also similar to that of Formula One and has been used for symbolic purposes.
 
 ![Image of color pallete in the project](README-images/color-wheel.png "Optional title")
 
@@ -88,17 +88,19 @@ this is the stage of the quiz where the user can play the quiz, check the rules 
 This is the stage of the quiz where the user can choose 1 of three different difficulty levels in the quiz Rookie (easy), Seasoned Driver (medium) or Expert ~(hard).
 
 **Starting Light Procedure**  
-This stage of the quiz is an animation used to try and enhance the users experience and bring real life Formula 1 into the quiz.
+This stage of the quiz is an animation used to try and enhance the users experience and bring real life Formula 1 into the quiz. Using CSS, I have created a set of racing starting lights that consist of circles and a rectangle. Once the difficulty level is selected, the lights should change colour from black to red with associated audio and once all of the lights are red, they will go out and a message will appear.
 
 **The Quiz**  
-This is the stage of the quiz where the user is presented with the difficulty level of the quiz that they have selected. Each difficulty level consists of 10 questions, users have 15 seconds per question to answer before the timer runs out. If the timer runs out, the user has automatically recieved an incorrect answer for that question. The user has 4 answers to choose from, once the user has selected an answer, the quiz will load the next question after a short delay. The user will then be notified if they got the answer correct or not and also recieve a feedback message. There is a scoring system for each difficulty level, correct answers will be awarded with 1 point on Rookie difficaulty, 5 points on seasoned driver difficulty and 10 points on expert difficulty.
+This is the stage of the quiz where the user is presented with the difficulty level of the quiz that they have selected. Each difficulty level consists of 10 questions, users have 15 seconds per question to answer before the timer runs out. If the timer runs out, the user has automatically received an incorrect answer for that question. The user has 4 answers to choose from, once the user has selected an answer, the quiz will load the next question after a short delay. The user will then be notified if they got the answer correct or not and also receive a feedback message. There is a scoring system for each difficulty level, correct answers will be awarded with 1 point on Rookie difficulty, 5 points on seasoned driver difficulty and 10 points on expert difficulty.
 
 **Completion**  
-Once the quiz is finished, users will be presented with a page that tells the user how much they have scored in the quiz and gives them the option to submit their name to the leaderboard, their is also on option to return to the main menu, in this case, the intro box.
+Once the quiz is finished, users will be presented with a page that tells the user how much they have scored in the quiz and gives them the option to submit their name to the leaderboard, there is also an option to return to the main menu, in this case, the intro box.
 
+**Leaderboard**  
+I have also included a leaderboard which stores users information using local storage. The leaderboard will display their name, score and rank.  
 
 ### Symbology  
-I have put alot of thought into the symbology of the site. For example, many of the design and animation aspects have been done to closely match what can be seen in Formula One today. As previously mentioned, the gogle font used is the same as in Formula One, the scoring system matches the way that racers are scored. The audio that features throughout the site is very similar to what would be heard during a race day. The starting light procedure proior to the quiz is what one would see prior to a race starting and the displayed score at the end mimics end of race celebrations.
+I have put alot of thought into the symbology of the site. For example, many of the design and animation aspects have been done to closely match what can be seen in Formula One today. As previously mentioned, the google font used is the same as in Formula One, the scoring system matches the way that racers are scored. The audio that features throughout the site is very similar to what would be heard during a race day. The starting light procedure prior to the quiz is what one would see prior to a race starting and the displayed score at the end mimics end of race celebrations.
 
 
 ### Accessibility  
@@ -106,7 +108,7 @@ The site has scored highly in terms of accessibility, I have included alt text d
 
 ### Imagery
 
-I used minimal imagery for my site with the intention to keep it as simplistic as possible. Alos, to really optimise the site with imagery, i would need to use Official F1 imagery which would breach copyright. Images used can be found in the credits.
+I used minimal imagery for my site with the intention to keep it as simplistic as possible. Also, to really optimise the site with imagery, i would need to use Official F1 imagery which would breach copyright. Images used can be found in the credits.
 
 ### Wireframes
 
@@ -124,12 +126,12 @@ Overall, the design of the 41Q website is clean, modern, and easy to use. I beli
 ### General features
 
 **Spinning Tyre**  
-I used an image of a Formula 1 car tyre and used CSS to rotate the car clockwise, mimicing an actual Formula 1 car. 
+I used an image of a Formula 1 car tyre and used CSS to rotate the car clockwise, mimicking an actual Formula 1 car. 
 
 ![Image of spinning tyre](README-images/spinning-tyre.png "Optional title")
 
 **Mute button**  
-I inluded a mute button to give user control of audio that has been included on the site. 
+I included a mute button to give user control of audio that has been included on the site. 
 
 ![Image of mute button](README-images/mute-button.png "Optional title")
 
@@ -139,7 +141,7 @@ I included a number of different rectangles and circles and using a combination 
 ![Image of starting light animation](README-images/starting-light.png "Optional title")
 
 **Question Counter**  
-I included a question counter and accomponying progress bar for better user experience. This will count questions up for 1-10 and the progress bar will fill accordingly.
+I included a question counter and accompanying progress bar for better user experience. This will count questions up for 1-10 and the progress bar will fill accordingly.
 
 ![Image of question-counter](README-images/question-counter.png "Optional title")
 
@@ -149,19 +151,19 @@ I included a timer that counts down from 15 with the color changing when the tim
 ![Image of timer](README-images/timer.png "Optional title")
 
 **Score**  
-The score counter is as previously mentioned, correct answers will be awarded with 1 point on Rookie difficaulty, 5 points on seasoned driver difficulty and 10 points on expert difficulty.
+The score counter is as previously mentioned, correct answers will be awarded with 1 point on Rookie difficulty, 5 points on seasoned driver difficulty and 10 points on expert difficulty.
 
 ![Image of score system](README-images/score-system.png "Optional title")
 
 **Correct Answer**  
-If users answer a question correctly, they recieve a 'correct answer!' message and a random positive message. The correct answer button will also change color to green.
+If users answer a question correctly, they receive a 'correct answer!' message and a random positive message. The correct answer button will also change color to green.
 
 ![Image of correct answer button](README-images/correct-answer-button.png "Optional title")
 
 ![Image of correct answer feedback](README-images/correct-answer-feedback.png "Optional title")
 
 **Incorrect Answer**  
-If users answer a question incorrectly, they recieve an 'incorrect answer' message and a random negative message. The selected answer will also change color to red.
+If users answer a question incorrectly, they receive an 'incorrect answer' message and a random negative message. The selected answer will also change color to red.
 
 ![Image of incorrect answer button](README-images/incorrect-answer-button.png "Optional title")
 
@@ -213,10 +215,10 @@ jQuery came with Bootstrap to make the navbar responsive and was also used in ja
 CDN jsdeliver was used to serve static assets bootstrap and jquery to improve performance and reliability.
 
 [Google Fonts](https://fonts.google.com/)  
-Google fonts were used to import Lato and Roboto fonts which is used on all pages throughout the project.
+Google fonts were used to import Titillium Web font which is used throughout the project.
 
 [Font awesome](https://fontawesome.com/)  
-Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+Font Awesome was used for the logo and social media links in the footer.
 
 [Github](https://github.com/)   
 GitHub is used to store the projects code after being pushed from Git.
@@ -266,14 +268,14 @@ To deploy the website on GitHub Pages, the following steps were followed:
 
 **How to clone the repository**
 
-- Go to the ###  repository on GitHub.
+- Go to the https://github.com/ojalaw/Formula_One_Quiz_MP2  repository on GitHub.
 - Click the "Code" button to the right of the screen, click HTTPs and copy the link there.
 - Open a GitBash terminal and navigate to the directory where you want to locate the clone.
 - On the command line, type "git clone" then paste in the copied url and press the Enter key to begin the clone process.  
 
 **How to Fork the repository**  
 
-- Go to the ### repository on GitHub.
+- Go to the https://github.com/ojalaw/Formula_One_Quiz_MP2 repository on GitHub.
 - Click on the 'Fork' option towards the top left of the page.  
 - Click the dropdown button and click 'create a new fork'.  
 - This will bring up a page with details of the repository, fill in boxes as required.
@@ -292,8 +294,8 @@ Bootstrap v5.3.0
 Code Institute training material
 
 ### Content
-
-
+I used the following content as inspiration for some parts of my site, all content was created by myself.  
+Quiz Tutorial - https://www.youtube.com/watch?v=u98ROZjBWy8&t=7s  
 
 ###  Media
 

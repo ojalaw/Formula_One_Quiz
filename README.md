@@ -179,7 +179,7 @@ I have given users the option of entering their name so that they can be display
 
 **Audio**  
 I have used various different audio. 
-I used 'beeping' audio to simulate startling light procedure. Feedback audio depending on whether the answer was correct or not. A correct answer will play an impact wrench audio which is widely used in Formula 1, an incorrect answer will result in the generic 'incorrect answer' buzz. Also, If the user recieves a congratulatory message at the end of the quiz, they will be presented with a crowd cheering, if it is a 'better luck next time' message, they will be presented with a sad sounding trumpet.  
+I used 'beeping' audio to simulate startling light procedure. Feedback audio depending on whether the answer was correct or not. A correct answer will play an impact wrench audio which is widely used in Formula 1, an incorrect answer will result in the generic 'incorrect answer' buzz. Also, If the user receives a congratulatory message at the end of the quiz, they will be presented with a crowd cheering.
 
 
 ### Future Implementations

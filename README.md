@@ -149,6 +149,7 @@ I included a timer that counts down from 15 with the color changing when the tim
 ![Image of timer](README-images/timer.png "Optional title")
 
 **Score**  
+The score counter is as previously mentioned, correct answers will be awarded with 1 point on Rookie difficaulty, 5 points on seasoned driver difficulty and 10 points on expert difficulty.
 
 ![Image of score system](README-images/score-system.png "Optional title")
 

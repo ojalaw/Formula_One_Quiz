@@ -21,8 +21,6 @@ Link to live site: https://ojalaw.github.io/Formula_One_Quiz_MP2/
   * [Future Updates](#future-updates)
 
 * [Features](#features)
-  * [General Features on Every Page](#general-features-on-every-page)
-  * [General Features on Individual Pages](#general-features-on-individual-pages)
   * [Future Implementations](#future-implementations)
   * [Accessibility](#accessibility)
 
@@ -320,4 +318,4 @@ start.mp3 - Pontiac Grand Prix 4 - Epidemicsound.com
 ###  Acknowledgments
 
 Code Institute training material  
-
+Code Institute - Harry Dhillon
